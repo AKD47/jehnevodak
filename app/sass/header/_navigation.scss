@@ -1,0 +1,39 @@
+.header {
+
+  &__navigation {
+    position: relative;
+    float: right;
+  }
+
+  &__nav {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-wrap(row);
+    justify-content: flex-end;
+    position: relative;
+    float: left;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+    > li {
+      position: relative;
+      float: left;
+
+      > a {
+        position: relative;
+        float: left;
+        width: 100%;
+        margin: 20px 24px;
+        color: white;
+        font-family: $HelveticaNeueLTProBold;
+        font-size: 11px;
+
+        &:hover {
+          color: #b99752;
+          @include transition(0.4s);
+        }
+      }
+    }
+  }
+}

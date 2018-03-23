@@ -1,0 +1,24 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #353534;
+  z-index: 10;
+
+  &__logo {
+    position: relative;
+    float: left;
+    width: 190px;
+    height: 35px;
+    overflow: hidden;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 60px;
+
+    img, svg {
+      size: 100%;
+      object-fit: contain;
+    }
+  }
+}
