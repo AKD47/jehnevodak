@@ -1,0 +1,78 @@
+.team {
+  position: relative;
+  float: left;
+  width: 100%;
+
+  &__wrapper {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    position: relative;
+    float: left;
+    width: 100%;
+
+    &--element {
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      position: relative;
+      float: left;
+      width: 50%;
+
+      > .photo {
+        position: relative;
+        float: left;
+        width: 50%;
+        height: 337px;
+        overflow: hidden;
+
+        > img {
+          size: 100%;
+          object-fit: contain;
+        }
+      }
+
+      > .descr {
+        @include display-flex(flex);
+        @include flex-wrap(wrap);
+        @include flex-direction(column);
+        @include align-content(center);
+        @include justify-content(center);
+        position: relative;
+        float: left;
+        width: 50%;
+        background-color: #e5e5e5;
+
+        > h3 {
+          position: relative;
+          float: left;
+          width: 100%;
+          margin-top: 0;
+          margin-bottom: 15px;
+          text-align: center;
+          color: #b99752;
+          font-family: $HelveticaNeueLTProRoman;
+          font-size: 18px;
+        }
+
+        > p {
+          position: relative;
+          float: left;
+          width: 100%;
+          margin: 0;
+          text-align: center;
+          color: #b99752;
+          font-family: $HelveticaNeueLTProLt;
+          font-size: 18px;
+        }
+      }
+    }
+    
+    &--element.bg {
+      
+      > .descr {
+        background-color: #fceed0;
+      }
+    }
+
+  }
+}
