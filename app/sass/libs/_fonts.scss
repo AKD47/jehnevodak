@@ -1,5 +1,6 @@
 $HelveticaNeueLTProBold: 'Helvetica Neue LT Pro Bold';
 $HelveticaNeueLTProLt: 'Helvetica Neue LT Pro Lt';
+$HelveticaNeueLTProRoman: 'Helvetica Neue LT Pro Roman';
 
 @font-face {
   font-family: 'Helvetica Neue LT Pro Bold';
@@ -19,5 +20,15 @@ $HelveticaNeueLTProLt: 'Helvetica Neue LT Pro Lt';
   url('../fonts/HelveticaNeueLTPro/HelveticaNeueLTProLt.woff') format('woff'),
   url('../fonts/HelveticaNeueLTPro/HelveticaNeueLTProLt.ttf') format('truetype'),
   url('../fonts/HelveticaNeueLTPro/HelveticaNeueLTProLt.svg') format('svg');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Helvetica Neue LT Pro Roman';
+  src: url('../fonts/HelveticaNeueLTPro/HelveticaNeueLTProRoman.eot') format('embedded-opentype'),
+  url('../fonts/HelveticaNeueLTPro/HelveticaNeueLTProRoman.otf') format('otf'),
+  url('../fonts/HelveticaNeueLTPro/HelveticaNeueLTProRoman.woff2') format('woff2'),
+  url('../fonts/HelveticaNeueLTPro/HelveticaNeueLTProRoman.woff') format('woff'),
+  url('../fonts/HelveticaNeueLTPro/HelveticaNeueLTProRoman.ttf') format('truetype'),
+  url('../fonts/HelveticaNeueLTPro/HelveticaNeueLTProRoman.svg') format('svg');
   font-weight: normal;
 }
