@@ -1,0 +1,42 @@
+.footer {
+  position: relative;
+  float: left;
+  width: 100%;
+  background-color: #1d1d1b;
+  padding: 40px 0;
+  @include box-sizing(border-box);
+
+  &__descr {
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: $HelveticaNeueLTProLt;
+    font-size: 21px;
+    padding: 0 15%;
+    @include box-sizing(border-box);
+
+    > a {
+      margin-left: 5px;
+      color: #b99752;
+    }
+  }
+
+  &__art {
+    position: relative;
+    float: left;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-family: $HelveticaNeueLTProBold;
+    font-size: 21px;
+    padding: 0 15%;
+    @include box-sizing(border-box);
+
+    span {
+      color: #b99752;
+      margin-right: 5px;
+    }
+  }
+}
