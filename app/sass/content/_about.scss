@@ -1,0 +1,164 @@
+.about {
+  position: relative;
+  float: left;
+  width: 100%;
+  
+  &__text-box {
+    position: relative;
+    float: left;
+    width: 100%;
+    background-color: #fceed0;
+    padding: 20px 0 40px 0;
+    @include box-sizing(border-box);
+
+    > p {
+      position: relative;
+      float: left;
+      width: 100%;
+      margin-top: 22px;
+      margin-bottom: 0;
+      padding-left: 15%;
+      padding-right: 15%;
+      @include box-sizing(border-box);
+      text-align: center;
+      color: #666;
+      font-family: $HelveticaNeueLTProLt;
+      font-size: 13px;
+      line-height: 18px;
+    }
+  }
+
+  &__wrapper {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    position: relative;
+    float: left;
+    width: 100%;
+  }
+  
+  &__left {
+    position: relative;
+    float: left;
+    width: 50%;
+    background-color: #1d1d1b;
+    padding: 10px 30px;
+    @include box-sizing(border-box);
+
+    > h3 {
+      position: relative;
+      float: left;
+      width: 100%;
+      color: #b99752;
+      font-family: $HelveticaNeueLTProBold;
+      font-size: 18px;
+      margin: 18px 0;
+    }
+
+    > p {
+      position: relative;
+      float: left;
+      width: 100%;
+      color: white;
+      font-family: $HelveticaNeueLTProLt;
+      font-size: 13px;
+      line-height: 18px;
+      margin: 0 0 18px 0;
+    }
+  }
+
+  &__right {
+    position: relative;
+    float: left;
+    width: 50%;
+    background-color: #ffffff;
+    padding: 10px 30px;
+    @include box-sizing(border-box);
+
+    > h3 {
+      position: relative;
+      float: left;
+      width: 100%;
+      color: #b99752;
+      font-family: $HelveticaNeueLTProBold;
+      font-size: 18px;
+      margin: 18px 0;
+    }
+
+    > p {
+      position: relative;
+      float: left;
+      width: 100%;
+      color: #666;
+      font-family: $HelveticaNeueLTProLt;
+      font-size: 13px;
+      line-height: 18px;
+      margin: 0 0 18px 0;
+    }
+  }
+
+  &__slider-top {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 680px;
+    overflow: hidden;
+    border-bottom: 3px solid #a38548;
+
+    &--slide {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 680px;
+      overflow: hidden;
+
+      img, svg {
+        size: 100%;
+        object-fit: cover;
+      }
+
+      &:hover, &:active, &:focus {
+        outline: none;
+      }
+    }
+
+    &--title {
+      display: block;
+      position: absolute;
+      right: 88px;
+      bottom: 200px;
+      text-align: justify;
+      letter-spacing: 5px;
+      color: #fff;
+      font-size: 31px;
+      font-family: $HelveticaNeueLTProLt;
+    }
+  }
+
+  &__slider-for {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 237px;
+    overflow: hidden;
+    border-bottom: 3px solid #a38548;
+
+    &--slide {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      img, svg {
+        size: 100%;
+        object-fit: cover;
+      }
+
+      &:hover, &:active, &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
