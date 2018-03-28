@@ -18,6 +18,10 @@
       float: left;
       width: 50%;
 
+      @include breakpoint(max-width 700px) {
+        width: 100%;
+      }
+
       > .photo {
         position: relative;
         float: left;
@@ -25,9 +29,20 @@
         height: 337px;
         overflow: hidden;
 
+        @include breakpoint(max-width 1024px) {
+          height: 250px;
+        }
+        @include breakpoint(max-width 900px) {
+          height: 190px;
+        }
+
         > img {
           size: 100%;
           object-fit: contain;
+
+          @include breakpoint(max-width 1024px) {
+            object-fit: cover;
+          }
         }
       }
 
@@ -73,6 +88,10 @@
           font-family: $HelveticaNeueLTProRoman;
           font-size: 18px;
           font-weight: 400;
+
+          @include breakpoint(max-width 700px) {
+            font-size: 15px;
+          }
         }
 
         > p {
@@ -84,6 +103,10 @@
           color: #b99752;
           font-family: $HelveticaNeueLTProLt;
           font-size: 18px;
+
+          @include breakpoint(max-width 700px) {
+            font-size: 14px;
+          }
         }
       }
 
