@@ -22,12 +22,12 @@ $(document).ready(function () {
     /*close*/
 
     /*animate scroll menu*/
-    $(document).on('click', '.header__nav li a', function (event) {
+    $(document).on('click', '.header__nav li a.go-to', function (event) {
         event.preventDefault();
         if($(this).hasClass('menu-active')) {
             $(this).removeClass('menu-active')
         } else {
-            $('.header__nav li a').removeClass('menu-active');
+            $('.header__nav li a.go-to').removeClass('menu-active');
             $(this).addClass('menu-active');
         }
         var href = $(this).attr('href');
@@ -169,6 +169,61 @@ $(document).ready(function () {
         autoplay: true,
         autoplaySpeed: 4000,
         asNavFor: '.team__slider-top',
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 700,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    slidesToShow: 2
+                }
+            }
+        ]
+    });
+    /*close*/
+
+    /*media slider*/
+    $('#media-slider').slick({
+        vertical: true,
+        verticalSwiping: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+        fade: false,
+        infinite: true,
+        touchMove: false,
+        adaptiveHeight: true
+    });
+    /*close*/
+
+    /*about slider*/
+    $('.media__slider-top').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        asNavFor: '.media__slider-for'
+    });
+    $('.media__slider-for').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        asNavFor: '.media__slider-top',
         dots: false,
         centerMode: true,
         focusOnSelect: true,
