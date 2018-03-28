@@ -30,13 +30,21 @@ $(document).ready(function () {
             $('.header__nav li a').removeClass('menu-active');
             $(this).addClass('menu-active');
         }
-        var m_height = $('.header__nav').height();
         var href = $(this).attr('href');
         var target = $(href);
-        var top = target.offset().top - m_height;
-        console.log(m_height);
-        $('html,body').animate({scrollTop: top}, 1000);
-        return false;
+        if (window.innerWidth < 710) {
+            var m_height = parseInt('54px');
+            var top = target.offset().top - m_height;
+            console.log(m_height);
+            $('html,body').animate({scrollTop: top}, 1000);
+            return false;
+        } else {
+            var m_height = $('.header__nav').height();
+            var top = target.offset().top - m_height;
+            console.log(m_height);
+            $('html,body').animate({scrollTop: top}, 1000);
+            return false;
+        }
     });
     /*close animate scroll menu*/
 

@@ -1,0 +1,101 @@
+.attent {
+  position: relative;
+  float: left;
+  width: 100%;
+
+  &__element {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    position: relative;
+    float: left;
+    width: 100%;
+
+    > .photo {
+      position: relative;
+      float: left;
+      width: 40%;
+      height: 340px;
+      overflow: hidden;
+
+      > img, svg {
+        size: 100%;
+        object-fit: cover;
+      }
+    }
+
+    > .descr {
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      @include flex-direction(column);
+      @include justify-content(center);
+      position: relative;
+      float: left;
+      width: 60%;
+      background-color: #fceed0;
+      padding: 0 55px;
+      @include box-sizing(border-box);
+
+      > .triangle {
+        position: absolute;
+        size: 24px;
+        top: auto;
+        left: -12px;
+        background-color: inherit;
+        @include transform(rotate(45deg));
+        z-index: 1;
+      }
+
+      > h3 {
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 40px;
+        text-align: left;
+        color: #b99752;
+        font-family: $HelveticaNeueLTProBold;
+        font-size: 18px;
+      }
+
+      > p {
+        position: relative;
+        float: left;
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 20px;
+        text-align: left;
+        color: #666;
+        font-family: $HelveticaNeueLTProLt;
+        font-size: 13px;
+        line-height: 18px;
+      }
+    }
+  }
+
+  &__element:nth-child(odd) {
+
+    > .descr {
+      background-color: #e5e5e5;
+
+      > .triangle-right {
+        position: absolute;
+        size: 24px;
+        top: auto;
+        right: -12px;
+        background-color: inherit;
+        @include transform(rotate(45deg));
+        z-index: 1;
+      }
+
+      > h3 {
+        text-align: right;
+        color: #666;
+      }
+
+      > p {
+        text-align: right;
+        color: #b99752;
+      }
+    }
+  }
+}
