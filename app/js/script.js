@@ -71,11 +71,15 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows: false,
         fade: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
         asNavFor: '.main-slider__for'
     });
     $('.main-slider__for').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
         asNavFor: '.main-slider__top',
         dots: false,
         centerMode: true,
@@ -107,12 +111,56 @@ $(document).ready(function () {
         slidesToScroll: 1,
         arrows: false,
         fade: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
         asNavFor: '.about__slider-for'
     });
     $('.about__slider-for').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
         asNavFor: '.about__slider-top',
+        dots: false,
+        centerMode: true,
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 700,
+                settings: {
+                    arrows: false,
+                    centerMode: true,
+                    slidesToShow: 2
+                }
+            }
+        ]
+    });
+    /*close*/
+
+    /*about slider*/
+    $('.team__slider-top').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        asNavFor: '.team__slider-for'
+    });
+    $('.team__slider-for').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        asNavFor: '.team__slider-top',
         dots: false,
         centerMode: true,
         focusOnSelect: true,
