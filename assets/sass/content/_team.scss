@@ -1,0 +1,279 @@
+.team {
+  position: relative;
+  float: left;
+  width: 100%;
+
+  &__wrapper {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include flex-direction(row);
+    position: relative;
+    float: left;
+    width: 100%;
+
+    &--element {
+      @include display-flex(flex);
+      @include flex-wrap(wrap);
+      position: relative;
+      float: left;
+      width: 50%;
+
+      @include breakpoint(max-width 700px) {
+        width: 100%;
+      }
+
+      > .photo {
+        position: relative;
+        float: left;
+        width: 50%;
+        height: 337px;
+        overflow: hidden;
+
+        @include breakpoint(max-width 1024px) {
+          height: 250px;
+        }
+        @include breakpoint(max-width 900px) {
+          height: 190px;
+        }
+
+        > img {
+          size: 100%;
+          object-fit: cover;
+
+          @include breakpoint(max-width 1024px) {
+            object-fit: cover;
+          }
+        }
+      }
+
+      > .descr {
+        @include display-flex(flex);
+        @include flex-wrap(wrap);
+        @include flex-direction(column);
+        @include align-content(center);
+        @include justify-content(center);
+        position: relative;
+        float: left;
+        width: 50%;
+        background-color: #e5e5e5;
+
+        > .triangle {
+          position: absolute;
+          size: 24px;
+          top: auto;
+          left: -12px;
+          background-color: inherit;
+          @include transform(rotate(45deg));
+          z-index: 1;
+
+          @include breakpoint(max-width 700px) {
+            display: none;
+          }
+        }
+
+        > .triangle--right {
+          position: absolute;
+          size: 24px;
+          top: auto;
+          right: -12px;
+          background-color: inherit;
+          @include transform(rotate(45deg));
+          z-index: 1;
+          @include breakpoint(max-width 700px) {
+            display: none;
+          }
+        }
+
+        > h3 {
+          position: relative;
+          float: left;
+          width: 100%;
+          margin-top: 0;
+          margin-bottom: 15px;
+          text-align: center;
+          color: #b99752;
+          font-family: $HelveticaNeueLTProRoman;
+          font-size: 18px;
+          font-weight: 400;
+
+          @include breakpoint(max-width 700px) {
+            font-size: 15px;
+          }
+        }
+
+        > p {
+          position: relative;
+          float: left;
+          width: 100%;
+          margin: 0;
+          text-align: center;
+          color: #b99752;
+          font-family: $HelveticaNeueLTProLt;
+          font-size: 18px;
+
+          @include breakpoint(max-width 700px) {
+            font-size: 14px;
+          }
+        }
+      }
+
+      > .descr--full {
+        @include display-flex(flex);
+        @include flex-wrap(wrap);
+        @include flex-direction(column);
+        @include align-content(center);
+        @include justify-content(center);
+        position: relative;
+        float: left;
+        width: 100%;
+        background-color: #fff;
+
+        > h3 {
+          text-align: center;
+          color: #b99752;
+          font-size: 28px;
+          font-family: $HelveticaNeueLTProRoman;
+          font-weight: 400;
+        }
+      }
+    }
+    
+    &--element.bg {
+      
+      > .descr {
+        background-color: #fceed0;
+      }
+    }
+
+    &--element:nth-child(odd) {
+      > .photo {
+        @include breakpoint(max-width 700px) {
+          order: 1;
+        }
+      }
+      > .descr {
+        @include breakpoint(max-width 700px) {
+          order: 2;
+        }
+      }
+    }
+
+    &--element:nth-child(even) {
+      > .photo {
+        @include breakpoint(max-width 700px) {
+          order: 2;
+        }
+      }
+      > .descr {
+        @include breakpoint(max-width 700px) {
+          order: 1;
+        }
+      }
+    }
+  }
+
+  &__slider-top {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 680px;
+    overflow: hidden;
+    border-bottom: 3px solid #a38548;
+
+    @include breakpoint(max-width 1200px){
+      height: 600px;
+    }
+    @include breakpoint(max-width 900px){
+      height: 520px;
+    }
+    @include breakpoint(max-width 700px){
+      height: 320px;
+    }
+
+    &--slide {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 680px;
+      overflow: hidden;
+
+      @include breakpoint(max-width 1200px){
+        height: 600px;
+      }
+      @include breakpoint(max-width 900px){
+        height: 520px;
+      }
+      @include breakpoint(max-width 700px){
+        height: 320px;
+      }
+
+      img, svg {
+        size: 100%;
+        object-fit: cover;
+      }
+
+      &:hover, &:active, &:focus {
+        outline: none;
+      }
+    }
+
+    &--title {
+      display: block;
+      position: absolute;
+      right: 88px;
+      bottom: 95px;
+      text-align: justify;
+      letter-spacing: 5px;
+      color: #fff;
+      font-size: 31px;
+      font-family: $HelveticaNeueLTProLt;
+
+      @include breakpoint(max-width 900px){
+        width: 100%;
+        right: 0;
+        bottom: 30px;
+        padding: 0 15px;
+        @include box-sizing(border-box);
+      }
+      @include breakpoint(max-width 700px){
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__slider-for {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 237px;
+    overflow: hidden;
+    border-bottom: 3px solid #a38548;
+
+    @include breakpoint(max-width 1200px){
+      height: 180px;
+    }
+    @include breakpoint(max-width 900px){
+      height: 130px;
+    }
+    @include breakpoint(max-width 700px){
+      height: 65px;
+    }
+
+    &--slide {
+      position: relative;
+      float: left;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      img, svg {
+        size: 100%;
+        object-fit: cover;
+      }
+
+      &:hover, &:active, &:focus {
+        outline: none;
+      }
+    }
+  }
+}
