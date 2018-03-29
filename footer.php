@@ -10,25 +10,13 @@
  */
 
 ?>
-
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'jehne' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'jehne' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'jehne' ), 'jehne', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer class="footer">
+    <p class="footer__descr">Dovolujeme si informovat, že subjektem pověřeným mimosoudním řešením spotřebitelských sporů
+        pro oblast sporů mezi advokátem a spotřebitelem ze Smluv o poskytování právních služeb (na základě zákona č.
+        634/1992 Sb., o ochraně spotřebitele ve znění pozdějších předpisů) je Česká advokátní komora, se sídlem Národní
+        tř. 16, 110 00 Praha 1, web:<a href="#">www.cak.cz</a></p>
+    <p class="footer__art"><span> www.jehnevodak.cz</span>© 2018 – Všechna práva vyhrazena</p>
+</footer>
 
 <?php wp_footer(); ?>
 

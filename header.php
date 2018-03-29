@@ -13,46 +13,37 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="http://gmpg.org/xfn/11">
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" sizes="16x16"
+          href="<?php bloginfo('template_directory'); ?>/assets/img/icons/favicon.ico">
+    <div class="preloader-wrap js-open">
+        <div class="preloader"><img src="<?php bloginfo('template_directory'); ?>/assets/img/icons/logo-loader.png"
+                                    class="c-gif js-gif"></div>
+    </div>
 
-	<?php wp_head(); ?>
+    <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'jehne' ); ?></a>
+<header class="header">
+    <div class="header__logo">
+        <img src="<?php bloginfo('template_directory'); ?>/assets/img/header-logo.png" alt="logo">
+    </div>
+    <nav class="header__navigation">
+        <a id="header-trigger" href="#" class="header__trigger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$jehne_description = get_bloginfo( 'description', 'display' );
-			if ( $jehne_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $jehne_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'jehne' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+        <?= wp_nav_menu( array(
+            'theme_location'  => 'top',//add menu to header
+            'container'       => false,
+            'menu_class'      => 'header__nav',
+        ))?>
+    </nav>
+</header>
