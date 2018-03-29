@@ -22,12 +22,12 @@ $(document).ready(function () {
     /*close*/
 
     /*animate scroll menu*/
-    $(document).on('click', '.header__nav li a.go-to', function (event) {
+    $(document).on('click', '.header__nav li.go-to a', function (event) {
         event.preventDefault();
         if($(this).hasClass('menu-active')) {
             $(this).removeClass('menu-active')
         } else {
-            $('.header__nav li a.go-to').removeClass('menu-active');
+            $('.header__nav li.go-to a').removeClass('menu-active');
             $(this).addClass('menu-active');
         }
         var href = $(this).attr('href');
