@@ -21,8 +21,10 @@
     <link rel="icon" type="image/png" sizes="16x16"
           href="<?php bloginfo('template_directory'); ?>/assets/img/icons/favicon.ico">
     <div class="preloader-wrap js-open">
-        <div class="preloader"><img src="<?php bloginfo('template_directory'); ?>/assets/img/icons/logo-loader.png"
-                                    class="c-gif js-gif"></div>
+        <div class="preloader">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/icons/logo-loader.png"
+                                    class="c-gif js-gif">
+        </div>
     </div>
 
     <?php wp_head(); ?>

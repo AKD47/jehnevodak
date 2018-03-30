@@ -3,25 +3,36 @@
 }
 
 //$options = array(
-//	'panel_1' => array(
-//		'title'   => __( 'Контакты', '{domain}' ),
+//	'panel_preloader' => array(
+//		'title'   => __( 'Preloader image', '{domain}' ),
 //		'options' => array(
-//			'phone_1' => array(
-//				'type'  => 'text',
-//				'label' => __( 'Номер', '{domain}' ),
-//			),
-//			'phone_2' => array(
-//				'type'  => 'text',
-//				'label' => __( 'Номер', '{domain}' ),
-//			),
-//			'address' => array(
-//				'type'  => 'text',
-//				'label' => __( 'Адрес', '{domain}' ),
-//			),
-//			'email' => array(
-//				'type'  => 'text',
-//				'label' => __( 'Электронный адрес', '{domain}' ),
+//			'image' => array(
+//				'type'  => 'upload',
+//				'label' => __( 'preloader', '{domain}' ),
+//                'desc'  => __('Add photo', '{domain}'),
+//                'images_only' => true,
 //			),
 //		),
 //	),
+//	'panel_contacts' => array(
+//		'title'   => __( 'Contacts', '{domain}' ),
+//		'options' => array(
+//			'phone_1' => array(
+//				'type'  => 'text',
+//				'label' => __( 'phonenumber', '{domain}' ),
+//			),
+//			'phone_2' => array(
+//				'type'  => 'text',
+//				'label' => __( 'phonenumber', '{domain}' ),
+//			),
+//			'address' => array(
+//				'type'  => 'text',
+//				'label' => __( 'Address', '{domain}' ),
+//			),
+//			'email' => array(
+//				'type'  => 'text',
+//				'label' => __( 'email', '{domain}' ),
+//			),
+//		),
+//	)
 //);

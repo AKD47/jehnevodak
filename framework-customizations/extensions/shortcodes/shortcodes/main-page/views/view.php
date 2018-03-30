@@ -11,7 +11,6 @@
                 <img src="<?= $att['photo']['url'] ?>" alt="slide">
                 <h3 class="main-slider__top--title"><?= $att['title'] ?></h3>
             </div>
-
         <?php }?>
     </div>
 
@@ -28,76 +27,51 @@
 
 <section id="about" class="about">
 
-    <h3 class="section-title">O nás</h3>
+    <h3 class="section-title"><?= $atts['about_title']?></h3>
 
     <div class="about__text-box">
-        <p>Advokátní kancelář Jehne, Vodák a partneří je již více než 15 let spolehlivým partnerem klientům z řad
-            středních a středně velkých podnikatelských subjektů, osobám fyzickým i právnickým, a to ve všech zásadních
-            oblastech práva. Na rozdíl od některých jiných advokátních kanceláří partneři a vlastníci kanceláře
-            advokacii aktivně vykonávají a přebírají tak za služby, poskytované kanceláří, plnou odpovědnost. Všichni
-            právníci naší advokátní kanceláře mají vysokoškolské vzdělání právnického směru a jsou řádně registrováni u
-            České advokátní komory.</p>
-        <p>Právní služby, poskytované naší advokátní kanceláří vycházejí z bezpodmínečně perfektní znalosti platného
-            práva a aktuální tuzemské i zahraniční judikatury. Naši právníci těmito znalostmi disponují a průběžně je
-            dle vývoje právní úpravy aktualizují.</p>
+
+        <?php foreach ( $atts['about_textbox'] as $att) {?>
+            <p><?= $att['textblock']?></p>
+        <? };?>
     </div>
     <div class="about__wrapper">
+
         <div class="about__left">
-            <h3>Absolutní mlčenlivost</h3>
-            <p>To, co jste nám sdělili pro potřeby výkonu naší činnosti zůstavá striktně uzamčeno v naší kanceláři.
-                Mlčenlivosti nás můžete zprostit jenom Vy. Vážíme si důvěry, se kterou se na nás obracíte a nezklameme
-                Vás.</p>
-            <h3>Profesionalita</h3>
-            <p>Nečiníme rozdíl mezi malými a velkými případy. Jsme přesvědčení, že klient, který se na nás obrátil a
-                odchází spokojen, se znovu vrátí. Ke každé kauze přistupujeme maximálně zodpovědně a hledáme to
-                nejvhodnější řešení. Staráme se a dbáme o co nejvyšší kvalitu našich výstupů, ve složitých,
-                komplikovaných případech podléhají tyto výstupy ještě závěrečné kontrole ze strany vedoucího advokáta
-                nebo partnera kanceláře.</p>
+            <?php foreach ($atts['about_left'] as $att) {?>
+                <h3><?= $att['title']?></h3>
+                <p><?= $att['textblock']?></p>
+            <? };?>
         </div>
+        
         <div class="about__right">
-            <h3>Naprostá spolehlivost</h3>
-            <p>Váš email či telefon nezůstane bez reakce. Termíny, na kterých jsme se dohodli striktně dodržujeme. To,
-                co jsme slíbili, rovněž splníme. Nenecháme Vás nikdy bez naší právní podpory.</p>
-            <h3>Efektivita</h3>
-            <p>Vždy hledáme co možná nejjednodušší a nejrychlejší cestu k vyřešení Vašeho problému. Kromě osobních
-                schůzek řešíme jednotlivé kauzy také emailem či telefonicky. Počet našich advokátů umožňuje vzájemnou
-                zastupitelnost a eliminuje riziko průtahů při řešení Vašich problémů.</p>
+            <?php foreach ( $atts['about_right'] as $att ) {?>
+                <h3><?= $att['title']?></h3>
+                <p><?= $att['textblock']?></p>
+            <? };?>           
         </div>
+        
         <div class="about__slider-top">
-            <div class="about__slider-top--slide">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_2.png" alt="slide">
-                <h3 class="about__slider-top--title">Být klientem naší advokátní kanceláře,<br>znamená respekt vašich
-                    obchodních partnerů.</h3>
-            </div>
-            <div class="about__slider-top--slide">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_3.png" alt="slide">
-                <h3 class="about__slider-top--title">Být klientem naší advokátní kanceláře,<br>znamená respekt vašich
-                    obchodních partnerů.</h3>
-            </div>
-            <div class="about__slider-top--slide"><img src="img/slide_4.png" alt="slide">
-                <h3 class="about__slider-top--title">Být klientem naší advokátní kanceláře,<br>znamená respekt vašich
-                    obchodních partnerů.</h3>
-            </div>
-            <div class="about__slider-top--slide">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/mg/slide_1.png" alt="slide">
-                <h3 class="about__slider-top--title">Být klientem naší advokátní kanceláře,<br>znamená respekt vašich
-                    obchodních partnerů.</h3>
-            </div>
+            
+            <?php foreach ( $atts['about_slider'] as $att ) {?>
+                <div class="about__slider-top--slide">
+                    <img src="<?= $att['photo']['url']?>" alt="slide">
+                    <h3 class="about__slider-top--title"><?= $att['title']?></h3>
+                </div>
+            <? };?>
+
         </div>
+
         <div class="about__slider-for">
-            <div class="about__slider-for--slide">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_2.png" alt="slide">
-            </div>
-            <div class="about__slider-for--slide">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_3.png" alt="slide">
-            </div>
-            <div class="about__slider-for--slide">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_4.png" alt="slide">
-            </div>
-            <div class="about__slider-for--slide">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_1.png" alt="slide">
-            </div>
+            
+            <?php foreach ( $atts['about_slider'] as $att ){?>
+                <div class="about__slider-for--slide">
+                    <img src="<?= $att['photo']['url']?>" alt="slide">
+                </div>
+            <? };?>
+
         </div>
+
     </div>
 </section>
 
