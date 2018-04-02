@@ -63,6 +63,7 @@
       @include breakpoint(max-width 900px){
         width: 100%;
         right: 0;
+        opacity: 1;
         bottom: 30px;
         padding: 0 15px;
         @include box-sizing(border-box);

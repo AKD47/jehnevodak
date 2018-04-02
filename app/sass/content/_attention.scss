@@ -112,11 +112,12 @@
     > .descr {
       background-color: #e5e5e5;
 
-      > .triangle-right {
+      > .triangle {
         position: absolute;
         size: 24px;
         top: auto;
         right: -12px;
+        left: inherit;
         background-color: inherit;
         @include transform(rotate(45deg));
         z-index: 1;
