@@ -6,7 +6,7 @@
 
     <div class="main-slider__top">
 
-        <?php foreach ( $atts['top_slider'] as $att ) {?>
+        <?php foreach ( $atts['top_slider_top'] as $att ) {?>
             <div class="main-slider__top--slide">
                 <img src="<?= $att['photo']['url'] ?>" alt="slide">
                 <h3 class="main-slider__top--title"><?= $att['title'] ?></h3>
@@ -16,7 +16,7 @@
 
     <div class="main-slider__for">
 
-        <?php foreach ( $atts['top_slider'] as $att ) {?>
+        <?php foreach ( $atts['top_slider_for'] as $att ) {?>
             <div class="main-slider__for--slide">
                 <img src="<?= $att['photo']['url'] ?>" alt="slide">
             </div>
@@ -53,7 +53,7 @@
         
         <div class="about__slider-top">
             
-            <?php foreach ( $atts['about_slider'] as $att ) {?>
+            <?php foreach ( $atts['about_slider_top'] as $att ) {?>
                 <div class="about__slider-top--slide">
                     <img src="<?= $att['photo']['url']?>" alt="slide">
                     <h3 class="about__slider-top--title"><?= $att['title']?></h3>
@@ -64,7 +64,7 @@
 
         <div class="about__slider-for">
             
-            <?php foreach ( $atts['about_slider'] as $att ){?>
+            <?php foreach ( $atts['about_slider_for'] as $att ){?>
                 <div class="about__slider-for--slide">
                     <img src="<?= $att['photo']['url']?>" alt="slide">
                 </div>
@@ -76,61 +76,71 @@
 </section>
 
 <section id="team" class="team">
-    <h3 class="section-title">Náš tým</h3>
+    <h3 class="section-title"><?= $atts['team_title'] ?></h3>
     <div class="team__wrapper">
         <div class="team__wrapper--element">
             <div class="photo">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/lawyer_1.png" alt="photo">
+                <img src="<?= $atts['team_member_photo1']['url'] ?>" alt="photo">
             </div>
             <div class="descr">
                 <div class="triangle"></div>
-                <h3>JUDr. Pavel Novák</h3>
-                <p>mail@jehnevodak.cz</p>
-                <p>+420 732 123 456</p>
+                <?php foreach ( $atts['team_member_descr1'] as $att) {?>
+                    <h3><?= $att['name']?></h3>
+                    <p><?= $att['email']?></p>
+                    <p><?= $att['phone']?></p>
+                <? };?>
             </div>
         </div>
         <div class="team__wrapper--element bg">
             <div class="photo">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/lawyer_2.png" alt="photo">
+                <img src="<?= $atts['team_member_photo2']['url'] ?>" alt="photo">
             </div>
             <div class="descr">
                 <div class="triangle"></div>
-                <h3>JUDr. Pavel Novák</h3>
-                <p>mail@jehnevodak.cz</p>
-                <p>+420 732 123 456</p>
+                <?php foreach ( $atts['team_member_descr2'] as $att) {?>
+                    <h3><?= $att['name']?></h3>
+                    <p><?= $att['email']?></p>
+                    <p><?= $att['phone']?></p>
+                <? };?>
             </div>
         </div>
         <div class="team__wrapper--element bg">
             <div class="descr">
                 <div class="triangle--right"></div>
-                <h3>JUDr. Pavel Novák</h3>
-                <p>mail@jehnevodak.cz</p>
-                <p>+420 732 123 456</p>
+                <?php foreach ( $atts['team_member_descr3'] as $att ) {?>
+                    <h3><?= $att['name']?></h3>
+                    <p><?= $att['email']?></p>
+                    <p><?= $att['phone']?></p>
+                <? };?>
             </div>
             <div class="photo">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/lawyer_3.png" alt="photo">
+                <img src="<?= $atts['team_member_photo3']['url']?>" alt="photo">
             </div>
         </div>
         <div class="team__wrapper--element">
             <div class="descr">
                 <div class="triangle--right"></div>
-                <h3>JUDr. Pavel Novák</h3>
-                <p>mail@jehnevodak.cz</p>
-                <p>+420 732 123 456</p>
+                <?php foreach ( $atts['team_member_descr4'] as $att) {?>
+                    <h3><?= $att['name'] ?></h3>
+                    <p><?= $att['email'] ?></p>
+                    <p><?= $att['phone']?></p>
+                <?php };?>
             </div>
             <div class="photo">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/lawyer_4.png" alt="photo">
+                <img src="<?= $atts['team_member_photo4']['url']?>" alt="photo">
             </div>
         </div>
         <div class="team__wrapper--element">
             <div class="photo">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/lawyer_5.png" alt="photo">
+                <img src="<?= $atts['team_member_photo5']['url']?>" alt="photo">
             </div>
             <div class="descr">
                 <div class="triangle"></div>
-                <h3>JUDr. Pavel Novák</h3>
-                <p>mail@jehnevodak.cz</p>
-                <p>+420 732 123 456</p>
+                <?php foreach ( $atts['team_member_descr5'] as $att) {?>
+                    <h3><?= $att['name']?></h3>
+                    <p><?= $att['email']?></p>
+                    <p><?= $att['phone']?></p>
+                <?php };?>
             </div>
         </div>
         <div class="team__wrapper--element bg">
@@ -207,21 +217,6 @@
         <div class="team__slider-top">
             <div class="team__slider-top--slide">
                 <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_3.png" alt="slide">
-                <h3 class="team__slider-top--title">Spolehlivost, efektivita a profesionalita...<br>...to jsou
-                    vlastnosti, které vždy ctíme.</h3>
-            </div>
-            <div class="team__slider-top--slide">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_4.png" alt="slide">
-                <h3 class="team__slider-top--title">Spolehlivost, efektivita a profesionalita...<br>...to jsou
-                    vlastnosti, které vždy ctíme.</h3>
-            </div>
-            <div class="team__slider-top--slide">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_1.png" alt="slide">
-                <h3 class="team__slider-top--title">Spolehlivost, efektivita a profesionalita...<br>...to jsou
-                    vlastnosti, které vždy ctíme.</h3>
-            </div>
-            <div class="team__slider-top--slide">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_2.png" alt="slide">
                 <h3 class="team__slider-top--title">Spolehlivost, efektivita a profesionalita...<br>...to jsou
                     vlastnosti, které vždy ctíme.</h3>
             </div>
