@@ -283,51 +283,30 @@
 </section>
 
 <section id="media" class="media">
-    <h3 class="section-title">Média o nás</h3>
+
+    <h3 class="section-title"><?= $atts['media_title']?></h3>
+
     <div id="media-slider" class="media__slider">
-        <div class="media__slider--slide">
-            <h3>BŘEZEN 2017</h3>
-            <p>Advokátní kancelář dokončila pro klienta koupi podílů ve společnosti podnikající v oblasti kovoprůmyslu
-                s dlouholetou tradicí na českém trhu.</p>
-        </div>
-        <div class="media__slider--slide">
-            <h3>BŘEZEN 2017</h3>
-            <p>Advokátní kancelář dokončila pro klienta koupi podílů ve společnosti podnikající v oblasti kovoprůmyslu
-                s dlouholetou tradicí na českém trhu.</p>
-        </div>
-        <div class="media__slider--slide">
-            <h3>BŘEZEN 2017</h3>
-            <p>Advokátní kancelář dokončila pro klienta koupi podílů ve společnosti podnikající v oblasti kovoprůmyslu
-                s dlouholetou tradicí na českém trhu.</p>
-        </div>
-        <div class="media__slider--slide">
-            <h3>BŘEZEN 2017</h3>
-            <p>Advokátní kancelář dokončila pro klienta koupi podílů ve společnosti podnikající v oblasti kovoprůmyslu
-                s dlouholetou tradicí na českém trhu.</p>
-        </div>
+
+        <?php foreach ( $atts['media_slider'] as $att ) {?>
+            <div class="media__slider--slide">
+                <h3><?= $att['title']?></h3>
+                <p><?= $att['text']?></p>
+            </div>
+        <? };?>
+
     </div>
+
     <div class="media__slider-top">
+
         <div class="media__slider-top--slide">
             <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_4.png" alt="slide">
             <h3 class="media__slider-top--title">Těší nás zájem médií o naši práci.<br>Pravidelně konzultujeme
                 významné<br>právní kauzy ve sdělovacích prostředcích.</h3>
         </div>
-        <div class="media__slider-top--slide">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_1.png" alt="slide">
-            <h3 class="media__slider-top--title">Těší nás zájem médií o naši práci.<br>Pravidelně konzultujeme
-                významné<br>právní kauzy ve sdělovacích prostředcích.</h3>
-        </div>
-        <div class="media__slider-top--slide">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_2.png" alt="slide">
-            <h3 class="media__slider-top--title">Těší nás zájem médií o naši práci.<br>Pravidelně konzultujeme
-                významné<br>právní kauzy ve sdělovacích prostředcích.</h3>
-        </div>
-        <div class="media__slider-top--slide">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_3.png" alt="slide">
-            <h3 class="media__slider-top--title">Těší nás zájem médií o naši práci.<br>Pravidelně konzultujeme
-                významné<br>právní kauzy ve sdělovacích prostředcích.</h3>
-        </div>
+
     </div>
+
     <div class="media__slider-for">
         <div class="media__slider-for--slide">
             <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_4.png" alt="slide">

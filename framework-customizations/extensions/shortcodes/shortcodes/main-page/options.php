@@ -655,7 +655,6 @@ $options = [
                 'type' => 'text',
                 'label' => __('title', '{domain}'),
                 'desc' => __('Add title', '{domain}'),
-                'images_only' => true,
             ),
             'textbox' => array(
                 'type' => 'addable-popup',
@@ -675,6 +674,36 @@ $options = [
                         'images_only' => true,
                     ),
                 ),
+            ),
+        ),
+    ),
+    'media_title' => array(
+        'type' => 'text',
+        'label' => __('title of "Média o nás" section', '{domain}'),
+        'desc' => __('add title', '{domain}'),
+        'value' => 'Média o nás',
+    ),
+    'media_slider' => array(
+        'type' => 'addable-popup',
+        'label' => __('"Média o nás" section slider', '{domain}'),
+        'desc' => __('adding elements', '{domain}'),
+        'template' => '{{- title }}',
+        'popup-title' => null,
+        'size' => 'small', // small, medium, large
+        'limit' => 10, // limit the number of popup`s that can be added
+        'add-button-text' => __('Add', '{domain}'),
+        'sortable' => true,
+        'popup-options' => array(
+            'title' => array(
+                'type' => 'text',
+                'label' => __('title', '{domain}'),
+                'desc' => __('Add title', '{domain}'),
+                'images_only' => true,
+            ),
+            'text' => array(
+                'type' => 'textarea',
+                'label' => __('textblock', '{domain}'),
+                'desc' => __('Add text', '{domain}'),
             ),
         ),
     ),
