@@ -78,6 +78,7 @@
 <section id="team" class="team">
     <h3 class="section-title"><?= $atts['team_title'] ?></h3>
     <div class="team__wrapper">
+
         <div class="team__wrapper--element">
             <div class="photo">
                 <img src="<?= $atts['team_member_photo1']['url'] ?>" alt="photo">
@@ -91,6 +92,7 @@
                 <? };?>
             </div>
         </div>
+
         <div class="team__wrapper--element bg">
             <div class="photo">
                 <img src="<?= $atts['team_member_photo2']['url'] ?>" alt="photo">
@@ -104,6 +106,7 @@
                 <? };?>
             </div>
         </div>
+
         <div class="team__wrapper--element bg">
             <div class="descr">
                 <div class="triangle--right"></div>
@@ -117,6 +120,7 @@
                 <img src="<?= $atts['team_member_photo3']['url']?>" alt="photo">
             </div>
         </div>
+
         <div class="team__wrapper--element">
             <div class="descr">
                 <div class="triangle--right"></div>
@@ -130,6 +134,7 @@
                 <img src="<?= $atts['team_member_photo4']['url']?>" alt="photo">
             </div>
         </div>
+
         <div class="team__wrapper--element">
             <div class="photo">
                 <img src="<?= $atts['team_member_photo5']['url']?>" alt="photo">
@@ -143,97 +148,114 @@
                 <?php };?>
             </div>
         </div>
+
         <div class="team__wrapper--element bg">
             <div class="photo">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/lawyer_6.png" alt="photo">
+                <img src="<?= $atts['team_member_photo6']['url']?>" alt="photo">
             </div>
             <div class="descr">
                 <div class="triangle"></div>
-                <h3>JUDr. Pavel Novák</h3>
-                <p>mail@jehnevodak.cz</p>
-                <p>+420 732 123 456</p>
+                <?php foreach ( $atts['team_member_descr6'] as $att) {?>
+                    <h3><?= $att['name']?></h3>
+                    <p><?= $att['email']?></p>
+                    <p><?= $att['phone']?></p>
+                <? };?>
             </div>
         </div>
+
         <div class="team__wrapper--element bg">
             <div class="descr">
                 <div class="triangle--right"></div>
-                <h3>JUDr. Pavel Novák</h3>
-                <p>mail@jehnevodak.cz</p>
-                <p>+420 732 123 456</p>
+                <?php foreach ( $atts['team_member_descr7'] as $att) {?>
+                    <h3><?= $att['name']?></h3>
+                    <p><?= $att['email']?></p>
+                    <p><?= $att['phone']?></p>
+                <?php };?>
             </div>
             <div class="photo">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/lawyer_7.png" alt="photo">
+                <img src="<?= $atts['team_member_photo7']['url'] ?>" alt="photo">
             </div>
         </div>
+
         <div class="team__wrapper--element">
             <div class="descr">
                 <div class="triangle--right"></div>
-                <h3>JUDr. Pavel Novák</h3>
-                <p>mail@jehnevodak.cz</p>
-                <p>+420 732 123 456</p>
+                <?php foreach ( $atts['team_member_descr8'] as $att) {?>
+                    <h3><?= $att['name']?></h3>
+                    <p><?= $att['email']?></p>
+                    <p><?= $att['phone']?></p>
+                <?php };?>
             </div>
             <div class="photo">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/lawyer_8.png" alt="photo">
+                <img src="<?= $atts['team_member_photo8']['url'] ?>" alt="photo">
             </div>
         </div>
+
         <div class="team__wrapper--element">
             <div class="photo">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/lawyer_9.png" alt="photo">
+                <img src="<?= $atts['team_member_photo9']['url'] ?>" alt="photo">
             </div>
             <div class="descr">
                 <div class="triangle"></div>
-                <h3>JUDr. Pavel Novák</h3>
-                <p>mail@jehnevodak.cz</p>
-                <p>+420 732 123 456</p>
+                <?php foreach ( $atts['team_member_descr9'] as $att ) {?>
+                    <h3><?= $att['name']?></h3>
+                    <p><?= $att['email']?></p>
+                    <p><?= $att['phone']?></p>
+                <? };?>
             </div>
         </div>
+
         <div class="team__wrapper--element bg">
             <div class="photo">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/lawyer_10.png" alt="photo">
+                <img src="<?= $atts['team_member_photo10']['url']?>" alt="photo">
             </div>
             <div class="descr">
                 <div class="triangle"></div>
-                <h3>JUDr. Pavel Novák</h3>
-                <p>mail@jehnevodak.cz</p>
-                <p>+420 732 123 456</p>
+                <?php foreach ( $atts['team_member_descr10'] as $att ) {?>
+                    <h3><?= $att['name']?></h3>
+                    <p><?= $att['email']?></p>
+                    <p><?= $att['phone']?></p>
+                <?php };?>
             </div>
         </div>
+
         <div class="team__wrapper--element bg">
             <div class="descr">
                 <div class="triangle--right"></div>
-                <h3>JUDr. Pavel Novák</h3>
-                <p>mail@jehnevodak.cz</p>
-                <p>+420 732 123 456</p>
+                <?php foreach ( $atts['team_member_descr11'] as $att) {?>
+                    <h3><?= $att['name']?></h3>
+                    <p><?= $att['email']?></p>
+                    <p><?= $att['phone']?></p>
+                <?php };?>
             </div>
             <div class="photo">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/lawyer_11.png" alt="photo">
+                <img src="<?= $atts['team_member_photo11']['url'] ?>" alt="photo">
             </div>
         </div>
+
         <div class="team__wrapper--element">
             <div class="descr--full">
                 <h3>Rádi Vás poznáme osobně.</h3>
             </div>
         </div>
         <div class="team__slider-top">
-            <div class="team__slider-top--slide">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_3.png" alt="slide">
-                <h3 class="team__slider-top--title">Spolehlivost, efektivita a profesionalita...<br>...to jsou
-                    vlastnosti, které vždy ctíme.</h3>
-            </div>
+
+            <?php foreach ( $atts['team_slider_top'] as $att) {?>
+                <div class="team__slider-top--slide">
+                    <img src="<?= $att['photo']['url']?>" alt="slide">
+                    <h3 class="team__slider-top--title"><?= $att['title']?></h3>
+                </div>
+            <? };?>
+
         </div>
         <div class="team__slider-for">
-            <div class="team__slider-for--slide">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_3.png" alt="slide">
-            </div>
-            <div class="team__slider-for--slide">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_4.png" alt="slide">
-            </div>
-            <div class="team__slider-for--slide">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_1.png" alt="slide">
-            </div>
-            <div class="team__slider-for--slide">
-                <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_2.png" alt="slide">
-            </div>
+
+            <?php foreach ( $atts['team_slider_for'] as $att) {?>
+                <div class="team__slider-for--slide">
+                    <img src="<?= $att['photo']?>" alt="slide">
+                </div>
+            <?php };?>
+
         </div>
     </div>
 </section>

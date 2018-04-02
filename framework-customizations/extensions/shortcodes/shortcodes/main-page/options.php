@@ -362,4 +362,270 @@ $options = [
             ),
         ),
     ),
+    'team_member_photo6' => array(
+        'type' => 'upload',
+        'label' => __('Photo', '{domain}'),
+        'desc' => __('Add photo', '{domain}'),
+        'images_only' => true,
+    ),
+    'team_member_descr6' => array(
+        'type' => 'addable-popup',
+        'label' => __('Name, phonenumber & email of teammember', '{domain}'),
+        'desc' => __('adding description', '{domain}'),
+        'template' => '{{- name }}',
+        'popup-title' => null,
+        'size' => 'small', // small, medium, large
+        'limit' => 1, // limit the number of popup`s that can be added
+        'add-button-text' => __('Add', '{domain}'),
+        'sortable' => true,
+        'popup-options' => array(
+            'name' => array(
+                'type' => 'text',
+                'label' => __('Name', '{domain}'),
+                'desc' => __('add name', '{domain}'),
+                'value' => '',
+            ),
+            'email' => array(
+                'type' => 'text',
+                'label' => __('email', '{domain}'),
+                'desc' => __('add email', '{domain}'),
+                'value' => '',
+            ),
+            'phone' => array(
+                'type' => 'text',
+                'label' => __('phone', '{domain}'),
+                'desc' => __('add phone', '{domain}'),
+                'value' => '',
+            ),
+        ),
+    ),
+    'team_member_photo7' => array(
+        'type' => 'upload',
+        'label' => __('Photo', '{domain}'),
+        'desc' => __('Add photo', '{domain}'),
+        'images_only' => true,
+    ),
+    'team_member_descr7' => array(
+        'type' => 'addable-popup',
+        'label' => __('Name, phonenumber & email of teammember', '{domain}'),
+        'desc' => __('adding description', '{domain}'),
+        'template' => '{{- name }}',
+        'popup-title' => null,
+        'size' => 'small', // small, medium, large
+        'limit' => 1, // limit the number of popup`s that can be added
+        'add-button-text' => __('Add', '{domain}'),
+        'sortable' => true,
+        'popup-options' => array(
+            'name' => array(
+                'type' => 'text',
+                'label' => __('Name', '{domain}'),
+                'desc' => __('add name', '{domain}'),
+                'value' => '',
+            ),
+            'email' => array(
+                'type' => 'text',
+                'label' => __('email', '{domain}'),
+                'desc' => __('add email', '{domain}'),
+                'value' => '',
+            ),
+            'phone' => array(
+                'type' => 'text',
+                'label' => __('phone', '{domain}'),
+                'desc' => __('add phone', '{domain}'),
+                'value' => '',
+            ),
+        ),
+    ),
+    'team_member_photo8' => array(
+        'type' => 'upload',
+        'label' => __('Photo', '{domain}'),
+        'desc' => __('Add photo', '{domain}'),
+        'images_only' => true,
+    ),
+    'team_member_descr8' => array(
+        'type' => 'addable-popup',
+        'label' => __('Name, phonenumber & email of teammember', '{domain}'),
+        'desc' => __('adding description', '{domain}'),
+        'template' => '{{- name }}',
+        'popup-title' => null,
+        'size' => 'small', // small, medium, large
+        'limit' => 1, // limit the number of popup`s that can be added
+        'add-button-text' => __('Add', '{domain}'),
+        'sortable' => true,
+        'popup-options' => array(
+            'name' => array(
+                'type' => 'text',
+                'label' => __('Name', '{domain}'),
+                'desc' => __('add name', '{domain}'),
+                'value' => '',
+            ),
+            'email' => array(
+                'type' => 'text',
+                'label' => __('email', '{domain}'),
+                'desc' => __('add email', '{domain}'),
+                'value' => '',
+            ),
+            'phone' => array(
+                'type' => 'text',
+                'label' => __('phone', '{domain}'),
+                'desc' => __('add phone', '{domain}'),
+                'value' => '',
+            ),
+        ),
+    ),
+    'team_member_photo9' => array(
+        'type' => 'upload',
+        'label' => __('Photo', '{domain}'),
+        'desc' => __('Add photo', '{domain}'),
+        'images_only' => true,
+    ),
+    'team_member_descr9' => array(
+        'type' => 'addable-popup',
+        'label' => __('Name, phonenumber & email of teammember', '{domain}'),
+        'desc' => __('adding description', '{domain}'),
+        'template' => '{{- name }}',
+        'popup-title' => null,
+        'size' => 'small', // small, medium, large
+        'limit' => 1, // limit the number of popup`s that can be added
+        'add-button-text' => __('Add', '{domain}'),
+        'sortable' => true,
+        'popup-options' => array(
+            'name' => array(
+                'type' => 'text',
+                'label' => __('Name', '{domain}'),
+                'desc' => __('add name', '{domain}'),
+                'value' => '',
+            ),
+            'email' => array(
+                'type' => 'text',
+                'label' => __('email', '{domain}'),
+                'desc' => __('add email', '{domain}'),
+                'value' => '',
+            ),
+            'phone' => array(
+                'type' => 'text',
+                'label' => __('phone', '{domain}'),
+                'desc' => __('add phone', '{domain}'),
+                'value' => '',
+            ),
+        ),
+    ),
+    'team_member_photo10' => array(
+        'type' => 'upload',
+        'label' => __('Photo', '{domain}'),
+        'desc' => __('Add photo', '{domain}'),
+        'images_only' => true,
+    ),
+    'team_member_descr10' => array(
+        'type' => 'addable-popup',
+        'label' => __('Name, phonenumber & email of teammember', '{domain}'),
+        'desc' => __('adding description', '{domain}'),
+        'template' => '{{- name }}',
+        'popup-title' => null,
+        'size' => 'small', // small, medium, large
+        'limit' => 1, // limit the number of popup`s that can be added
+        'add-button-text' => __('Add', '{domain}'),
+        'sortable' => true,
+        'popup-options' => array(
+            'name' => array(
+                'type' => 'text',
+                'label' => __('Name', '{domain}'),
+                'desc' => __('add name', '{domain}'),
+                'value' => '',
+            ),
+            'email' => array(
+                'type' => 'text',
+                'label' => __('email', '{domain}'),
+                'desc' => __('add email', '{domain}'),
+                'value' => '',
+            ),
+            'phone' => array(
+                'type' => 'text',
+                'label' => __('phone', '{domain}'),
+                'desc' => __('add phone', '{domain}'),
+                'value' => '',
+            ),
+        ),
+    ),
+    'team_member_photo11' => array(
+        'type' => 'upload',
+        'label' => __('Photo', '{domain}'),
+        'desc' => __('Add photo', '{domain}'),
+        'images_only' => true,
+    ),
+    'team_member_descr11' => array(
+        'type' => 'addable-popup',
+        'label' => __('Name, phonenumber & email of teammember', '{domain}'),
+        'desc' => __('adding description', '{domain}'),
+        'template' => '{{- name }}',
+        'popup-title' => null,
+        'size' => 'small', // small, medium, large
+        'limit' => 1, // limit the number of popup`s that can be added
+        'add-button-text' => __('Add', '{domain}'),
+        'sortable' => true,
+        'popup-options' => array(
+            'name' => array(
+                'type' => 'text',
+                'label' => __('Name', '{domain}'),
+                'desc' => __('add name', '{domain}'),
+                'value' => '',
+            ),
+            'email' => array(
+                'type' => 'text',
+                'label' => __('email', '{domain}'),
+                'desc' => __('add email', '{domain}'),
+                'value' => '',
+            ),
+            'phone' => array(
+                'type' => 'text',
+                'label' => __('phone', '{domain}'),
+                'desc' => __('add phone', '{domain}'),
+                'value' => '',
+            ),
+        ),
+    ),
+    'team_slider_top' => array(
+        'type' => 'addable-popup',
+        'label' => __('Team slider images', '{domain}'),
+        'desc' => __('adding images', '{domain}'),
+        'template' => '{{- title }}',
+        'popup-title' => null,
+        'size' => 'small', // small, medium, large
+        'limit' => 1, // limit the number of popup`s that can be added
+        'add-button-text' => __('Add', '{domain}'),
+        'sortable' => true,
+        'popup-options' => array(
+            'photo' => array(
+                'type' => 'upload',
+                'label' => __('Photo', '{domain}'),
+                'desc' => __('Add photo', '{domain}'),
+                'images_only' => true,
+            ),
+            'title' => array(
+                'type' => 'text',
+                'label' => __('title of photo', '{domain}'),
+                'desc' => __('add title', '{domain}'),
+                'value' => '',
+            ),
+        ),
+    ),
+    'team_slider_for' => array(
+        'type' => 'addable-popup',
+        'label' => __('Team slider images', '{domain}'),
+        'desc' => __('adding images', '{domain}'),
+        'template' => '{{- title }}',
+        'popup-title' => null,
+        'size' => 'small', // small, medium, large
+        'limit' => 4, // limit the number of popup`s that can be added
+        'add-button-text' => __('Add', '{domain}'),
+        'sortable' => true,
+        'popup-options' => array(
+            'photo' => array(
+                'type' => 'upload',
+                'label' => __('Photo', '{domain}'),
+                'desc' => __('Add photo', '{domain}'),
+                'images_only' => true,
+            ),
+        ),
+    ),
 ];
