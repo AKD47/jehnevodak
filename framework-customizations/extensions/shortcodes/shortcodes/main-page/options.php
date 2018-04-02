@@ -628,4 +628,54 @@ $options = [
             ),
         ),
     ),
+    'attent_title' => array(
+        'type' => 'text',
+        'label' => __('title of "Naše zaměření" section', '{domain}'),
+        'desc' => __('add title', '{domain}'),
+        'value' => 'Naše zaměření',
+    ),
+    'attent_element' => array(
+        'type' => 'addable-popup',
+        'label' => __('"Naše zaměření" section element', '{domain}'),
+        'desc' => __('adding elements', '{domain}'),
+        'template' => '{{- title }}',
+        'popup-title' => null,
+        'size' => 'small', // small, medium, large
+        'limit' => 20, // limit the number of popup`s that can be added
+        'add-button-text' => __('Add', '{domain}'),
+        'sortable' => true,
+        'popup-options' => array(
+            'photo' => array(
+                'type' => 'upload',
+                'label' => __('Photo', '{domain}'),
+                'desc' => __('Add photo', '{domain}'),
+                'images_only' => true,
+            ),
+            'title' => array(
+                'type' => 'text',
+                'label' => __('title', '{domain}'),
+                'desc' => __('Add title', '{domain}'),
+                'images_only' => true,
+            ),
+            'textbox' => array(
+                'type' => 'addable-popup',
+                'label' => __('Add text block', '{domain}'),
+                'desc' => __('adding images', '{domain}'),
+                'template' => '{{- text }}',
+                'popup-title' => null,
+                'size' => 'small', // small, medium, large
+                'limit' => 3, // limit the number of popup`s that can be added
+                'add-button-text' => __('Add', '{domain}'),
+                'sortable' => true,
+                'popup-options' => array(
+                    'text' => array(
+                        'type' => 'textarea',
+                        'label' => __('title', '{domain}'),
+                        'desc' => __('Add text block', '{domain}'),
+                        'images_only' => true,
+                    ),
+                ),
+            ),
+        ),
+    ),
 ];

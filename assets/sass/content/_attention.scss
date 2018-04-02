@@ -16,6 +16,7 @@
       width: 40%;
       height: 340px;
       overflow: hidden;
+      @include order(1);
 
       @include breakpoint(max-width 1024px) {
         height: auto;
@@ -38,6 +39,7 @@
       @include flex-wrap(wrap);
       @include flex-direction(column);
       @include justify-content(center);
+      @include order(2);
       position: relative;
       float: left;
       width: 60%;
@@ -110,13 +112,15 @@
   &__element:nth-child(odd) {
 
     > .descr {
+      @include order(1);
       background-color: #e5e5e5;
 
-      > .triangle-right {
+      > .triangle {
         position: absolute;
         size: 24px;
         top: auto;
         right: -12px;
+        left: inherit;
         background-color: inherit;
         @include transform(rotate(45deg));
         z-index: 1;
@@ -150,6 +154,10 @@
           margin-bottom: 15px;
         }
       }
+    }
+
+    > .photo {
+      @include order(2);
     }
   }
 }

@@ -320,6 +320,8 @@ textarea {
         .main-slider__top--title {
           width: 100%;
           right: 0;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+          opacity: 1;
           bottom: 30px;
           padding: 0 15px;
           -webkit-box-sizing: border-box;
@@ -506,6 +508,8 @@ textarea {
       @media (max-width: 900px) {
         .about__slider-top--title {
           width: 100%;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+          opacity: 1;
           right: 0;
           bottom: 30px;
           padding: 0 15px;
@@ -767,6 +771,8 @@ textarea {
       @media (max-width: 900px) {
         .team__slider-top--title {
           width: 100%;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+          opacity: 1;
           right: 0;
           bottom: 30px;
           padding: 0 15px;
@@ -823,7 +829,10 @@ textarea {
       float: left;
       width: 40%;
       height: 340px;
-      overflow: hidden; }
+      overflow: hidden;
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1; }
       @media (max-width: 1024px) {
         .attent__element > .photo {
           height: auto; } }
@@ -852,6 +861,9 @@ textarea {
       -webkit-box-pack: center;
           -ms-flex-pack: center;
               justify-content: center;
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
       position: relative;
       float: left;
       width: 60%;
@@ -915,20 +927,24 @@ textarea {
             text-align: justify;
             margin-bottom: 15px; } }
   .attent__element:nth-child(odd) > .descr {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
     background-color: #e5e5e5; }
-    .attent__element:nth-child(odd) > .descr > .triangle-right {
+    .attent__element:nth-child(odd) > .descr > .triangle {
       position: absolute;
       width: 24px;
       height: 24px;
       top: auto;
       right: -12px;
+      left: inherit;
       background-color: inherit;
       -webkit-transform: rotate(45deg);
       -ms-transform: rotate(45deg);
       transform: rotate(45deg);
       z-index: 1; }
       @media (max-width: 700px) {
-        .attent__element:nth-child(odd) > .descr > .triangle-right {
+        .attent__element:nth-child(odd) > .descr > .triangle {
           display: none; } }
     .attent__element:nth-child(odd) > .descr > h3 {
       text-align: right;
@@ -949,6 +965,10 @@ textarea {
         .attent__element:nth-child(odd) > .descr > p {
           text-align: justify;
           margin-bottom: 15px; } }
+  .attent__element:nth-child(odd) > .photo {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2; }
 
 .media {
   position: relative;
@@ -1063,6 +1083,8 @@ textarea {
       @media (max-width: 900px) {
         .media__slider-top--title {
           width: 100%;
+          -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+          opacity: 1;
           right: 0;
           bottom: 30px;
           padding: 0 15px;

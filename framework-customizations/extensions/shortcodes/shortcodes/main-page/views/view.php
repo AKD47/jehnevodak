@@ -252,7 +252,7 @@
 
             <?php foreach ( $atts['team_slider_for'] as $att) {?>
                 <div class="team__slider-for--slide">
-                    <img src="<?= $att['photo']?>" alt="slide">
+                    <img src="<?= $att['photo']['url']?>" alt="slide">
                 </div>
             <?php };?>
 
@@ -261,170 +261,25 @@
 </section>
 
 <section id="attent" class="attent">
-    <h3 class="section-title">Naše zaměření</h3>
-    <div class="attent__element">
-        <div class="photo">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/att-1.png" alt="photo">
+    <h3 class="section-title"><?= $atts['attent_title']?></h3>
+
+    <?php foreach ( $atts['attent_element'] as $att) {?>
+
+        <div class="attent__element">
+            <div class="photo">
+                <img src="<?= $att['photo']['url']?>" alt="photo">
+            </div>
+            <div class="descr">
+                <div class="triangle"></div>
+                <h3><?= $att['title']?></h3>
+                <?php foreach ( $att['textbox'] as $text) {?>
+                    <p><?= $text['text']?></p>
+                <?php };?>
+            </div>
         </div>
-        <div class="descr">
-            <div class="triangle"></div>
-            <h3>Právo obchodních korporací, fúze a akvizice</h3>
-            <p>Advokátní kancelář Jehne, Vodák a partneří je již více než 15 let spolehlivým partnerem klientům z řad
-                středních a středně velkých podnikatelských subjektů, osobám fyzickým i právnickým, a to ve všech
-                zásadních oblastech práva. Na rozdíl od některých jiných advokátních kanceláří partneři a vlastníci
-                kanceláře advokacii aktivně vykonávají a přebírají tak za služby, poskytované kanceláří, plnou
-                odpovědnost. Všichni právníci naší advokátní kanceláře mají vysokoškolské vzdělání právnického směru a
-                jsou řádně registrováni u České advokátní komory.</p>
-            <p>Právní služby, poskytované naší advokátní kanceláří vycházejí z bezpodmínečně perfektní znalosti platného
-                práva a aktuální tuzemské i zahraniční judikatury. Naši právníci těmito znalostmi disponují a průběžně
-                je dle vývoje právní úpravy aktualizují.</p>
-            <p>Právní služby, poskytované naší advokátní kanceláří vycházejí z bezpodmínečně perfektní znalosti platného
-                práva a aktuální tuzemské i zahraniční judikatury. Naši právníci těmito znalostmi disponují a průběžně
-                je dle vývoje právní úpravy aktualizují.</p>
-        </div>
-    </div>
-    <div class="attent__element">
-        <div class="descr">
-            <div class="triangle-right"></div>
-            <h3>GDPR</h3>
-            <p>Advokátní kancelář Jehne, Vodák a partneří je již více než 15 let spolehlivým partnerem klientům z řad
-                středních a středně velkých podnikatelských subjektů, osobám fyzickým i právnickým, a to ve všech
-                zásadních oblastech práva. Na rozdíl od některých jiných advokátních kanceláří partneři a vlastníci
-                kanceláře advokacii aktivně vykonávají a přebírají tak za služby, poskytované kanceláří, plnou
-                odpovědnost. Všichni právníci naší advokátní kanceláře mají vysokoškolské vzdělání právnického směru a
-                jsou řádně registrováni u České advokátní komory.</p>
-            <p>Právní služby, poskytované naší advokátní kanceláří vycházejí z bezpodmínečně perfektní znalosti platného
-                práva a aktuální tuzemské i zahraniční judikatury. Naši právníci těmito znalostmi disponují a průběžně
-                je dle vývoje právní úpravy aktualizují.</p>
-            <p>Právní služby, poskytované naší advokátní kanceláří vycházejí z bezpodmínečně perfektní znalosti platného
-                práva a aktuální tuzemské i zahraniční judikatury. Naši právníci těmito znalostmi disponují a průběžně
-                je dle vývoje právní úpravy aktualizují.</p>
-        </div>
-        <div class="photo">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/att-2.png" alt="photo">
-        </div>
-    </div>
-    <div class="attent__element">
-        <div class="photo">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/att-3.png" alt="photo"></div>
-        <div class="descr">
-            <div class="triangle"></div>
-            <h3>Práva cestujících v letecké dopravě</h3>
-            <p>Advokátní kancelář Jehne, Vodák a partneří je již více než 15 let spolehlivým partnerem klientům z řad
-                středních a středně velkých podnikatelských subjektů, osobám fyzickým i právnickým, a to ve všech
-                zásadních oblastech práva. Na rozdíl od některých jiných advokátních kanceláří partneři a vlastníci
-                kanceláře advokacii aktivně vykonávají a přebírají tak za služby, poskytované kanceláří, plnou
-                odpovědnost. Všichni právníci naší advokátní kanceláře mají vysokoškolské vzdělání právnického směru a
-                jsou řádně registrováni u České advokátní komory.</p>
-            <p>Právní služby, poskytované naší advokátní kanceláří vycházejí z bezpodmínečně perfektní znalosti platného
-                práva a aktuální tuzemské i zahraniční judikatury. Naši právníci těmito znalostmi disponují a průběžně
-                je dle vývoje právní úpravy aktualizují.</p>
-            <p>Právní služby, poskytované naší advokátní kanceláří vycházejí z bezpodmínečně perfektní znalosti platného
-                práva a aktuální tuzemské i zahraniční judikatury. Naši právníci těmito znalostmi disponují a průběžně
-                je dle vývoje právní úpravy aktualizují.</p>
-        </div>
-    </div>
-    <div class="attent__element">
-        <div class="descr">
-            <div class="triangle-right"></div>
-            <h3>Nekalá soutěž</h3>
-            <p>Advokátní kancelář Jehne, Vodák a partneří je již více než 15 let spolehlivým partnerem klientům z řad
-                středních a středně velkých podnikatelských subjektů, osobám fyzickým i právnickým, a to ve všech
-                zásadních oblastech práva. Na rozdíl od některých jiných advokátních kanceláří partneři a vlastníci
-                kanceláře advokacii aktivně vykonávají a přebírají tak za služby, poskytované kanceláří, plnou
-                odpovědnost. Všichni právníci naší advokátní kanceláře mají vysokoškolské vzdělání právnického směru a
-                jsou řádně registrováni u České advokátní komory.</p>
-            <p>Právní služby, poskytované naší advokátní kanceláří vycházejí z bezpodmínečně perfektní znalosti platného
-                práva a aktuální tuzemské i zahraniční judikatury. Naši právníci těmito znalostmi disponují a průběžně
-                je dle vývoje právní úpravy aktualizují.</p>
-            <p>Právní služby, poskytované naší advokátní kanceláří vycházejí z bezpodmínečně perfektní znalosti platného
-                práva a aktuální tuzemské i zahraniční judikatury. Naši právníci těmito znalostmi disponují a průběžně
-                je dle vývoje právní úpravy aktualizují.</p>
-        </div>
-        <div class="photo">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/att-4.png" alt="photo"></div>
-    </div>
-    <div class="attent__element">
-        <div class="photo">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/att-5.png" alt="photo"></div>
-        <div class="descr">
-            <div class="triangle"></div>
-            <h3>Právo nemovitosti a právní podpora developerských projektů</h3>
-            <p>Advokátní kancelář Jehne, Vodák a partneří je již více než 15 let spolehlivým partnerem klientům z řad
-                středních a středně velkých podnikatelských subjektů, osobám fyzickým i právnickým, a to ve všech
-                zásadních oblastech práva. Na rozdíl od některých jiných advokátních kanceláří partneři a vlastníci
-                kanceláře advokacii aktivně vykonávají a přebírají tak za služby, poskytované kanceláří, plnou
-                odpovědnost. Všichni právníci naší advokátní kanceláře mají vysokoškolské vzdělání právnického směru a
-                jsou řádně registrováni u České advokátní komory.</p>
-            <p>Právní služby, poskytované naší advokátní kanceláří vycházejí z bezpodmínečně perfektní znalosti platného
-                práva a aktuální tuzemské i zahraniční judikatury. Naši právníci těmito znalostmi disponují a průběžně
-                je dle vývoje právní úpravy aktualizují.</p>
-            <p>Právní služby, poskytované naší advokátní kanceláří vycházejí z bezpodmínečně perfektní znalosti platného
-                práva a aktuální tuzemské i zahraniční judikatury. Naši právníci těmito znalostmi disponují a průběžně
-                je dle vývoje právní úpravy aktualizují.</p>
-        </div>
-    </div>
-    <div class="attent__element">
-        <div class="descr">
-            <div class="triangle-right"></div>
-            <h3>Pracovní právo</h3>
-            <p>Advokátní kancelář Jehne, Vodák a partneří je již více než 15 let spolehlivým partnerem klientům z řad
-                středních a středně velkých podnikatelských subjektů, osobám fyzickým i právnickým, a to ve všech
-                zásadních oblastech práva. Na rozdíl od některých jiných advokátních kanceláří partneři a vlastníci
-                kanceláře advokacii aktivně vykonávají a přebírají tak za služby, poskytované kanceláří, plnou
-                odpovědnost. Všichni právníci naší advokátní kanceláře mají vysokoškolské vzdělání právnického směru a
-                jsou řádně registrováni u České advokátní komory.</p>
-            <p>Právní služby, poskytované naší advokátní kanceláří vycházejí z bezpodmínečně perfektní znalosti platného
-                práva a aktuální tuzemské i zahraniční judikatury. Naši právníci těmito znalostmi disponují a průběžně
-                je dle vývoje právní úpravy aktualizují.</p>
-            <p>Právní služby, poskytované naší advokátní kanceláří vycházejí z bezpodmínečně perfektní znalosti platného
-                práva a aktuální tuzemské i zahraniční judikatury. Naši právníci těmito znalostmi disponují a průběžně
-                je dle vývoje právní úpravy aktualizují.</p>
-        </div>
-        <div class="photo">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/att-6.png" alt="photo"></div>
-    </div>
-    <div class="attent__element">
-        <div class="photo">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/att-7.png" alt="photo"></div>
-        <div class="descr">
-            <div class="triangle"></div>
-            <h3>Právo IT</h3>
-            <p>Advokátní kancelář Jehne, Vodák a partneří je již více než 15 let spolehlivým partnerem klientům z řad
-                středních a středně velkých podnikatelských subjektů, osobám fyzickým i právnickým, a to ve všech
-                zásadních oblastech práva. Na rozdíl od některých jiných advokátních kanceláří partneři a vlastníci
-                kanceláře advokacii aktivně vykonávají a přebírají tak za služby, poskytované kanceláří, plnou
-                odpovědnost. Všichni právníci naší advokátní kanceláře mají vysokoškolské vzdělání právnického směru a
-                jsou řádně registrováni u České advokátní komory.</p>
-            <p>Právní služby, poskytované naší advokátní kanceláří vycházejí z bezpodmínečně perfektní znalosti platného
-                práva a aktuální tuzemské i zahraniční judikatury. Naši právníci těmito znalostmi disponují a průběžně
-                je dle vývoje právní úpravy aktualizují.</p>
-            <p>Právní služby, poskytované naší advokátní kanceláří vycházejí z bezpodmínečně perfektní znalosti platného
-                práva a aktuální tuzemské i zahraniční judikatury. Naši právníci těmito znalostmi disponují a průběžně
-                je dle vývoje právní úpravy aktualizují.</p>
-        </div>
-    </div>
-    <div class="attent__element">
-        <div class="descr">
-            <div class="triangle-right"></div>
-            <h3>Škoda na zdraví</h3>
-            <p>Advokátní kancelář Jehne, Vodák a partneří je již více než 15 let spolehlivým partnerem klientům z řad
-                středních a středně velkých podnikatelských subjektů, osobám fyzickým i právnickým, a to ve všech
-                zásadních oblastech práva. Na rozdíl od některých jiných advokátních kanceláří partneři a vlastníci
-                kanceláře advokacii aktivně vykonávají a přebírají tak za služby, poskytované kanceláří, plnou
-                odpovědnost. Všichni právníci naší advokátní kanceláře mají vysokoškolské vzdělání právnického směru a
-                jsou řádně registrováni u České advokátní komory.</p>
-            <p>Právní služby, poskytované naší advokátní kanceláří vycházejí z bezpodmínečně perfektní znalosti platného
-                práva a aktuální tuzemské i zahraniční judikatury. Naši právníci těmito znalostmi disponují a průběžně
-                je dle vývoje právní úpravy aktualizují.</p>
-            <p>Právní služby, poskytované naší advokátní kanceláří vycházejí z bezpodmínečně perfektní znalosti platného
-                práva a aktuální tuzemské i zahraniční judikatury. Naši právníci těmito znalostmi disponují a průběžně
-                je dle vývoje právní úpravy aktualizují.</p>
-        </div>
-        <div class="photo">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/att-8.png" alt="photo">
-        </div>
-    </div>
+
+    <?php };?>
+
 </section>
 
 <section id="media" class="media">

@@ -60,6 +60,14 @@
         color: #b99752;
       }
     }
+
+    > li.search a {
+      content: '';
+      width: auto;
+      color: transparent;
+      background-image: url('../img/icons/search-icon.png');
+      background-repeat: no-repeat;
+    }
   }
 
   &__trigger {
