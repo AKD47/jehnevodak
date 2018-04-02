@@ -220,7 +220,8 @@
     &--title {
       display: block;
       position: absolute;
-      right: 88px;
+      right: 0;
+      opacity: 0;
       bottom: 95px;
       text-align: justify;
       letter-spacing: 5px;

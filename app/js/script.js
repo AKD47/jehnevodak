@@ -77,6 +77,7 @@ $(document).ready(function () {
     $('.main-slider__top').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
+        dots: false,
         arrows: false,
         fade: true,
         autoplay: true,
@@ -90,6 +91,7 @@ $(document).ready(function () {
         autoplaySpeed: 4000,
         asNavFor: '.main-slider__top',
         dots: false,
+        arrows: false,
         centerMode: true,
         focusOnSelect: true,
         responsive: [
@@ -117,6 +119,7 @@ $(document).ready(function () {
     $('.about__slider-top').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
+        dots: false,
         arrows: false,
         fade: true,
         autoplay: true,
@@ -130,6 +133,7 @@ $(document).ready(function () {
         autoplaySpeed: 4000,
         asNavFor: '.about__slider-top',
         dots: false,
+        arrows: false,
         centerMode: true,
         focusOnSelect: true,
         responsive: [
@@ -157,6 +161,7 @@ $(document).ready(function () {
     $('.team__slider-top').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
+        dots: false,
         arrows: false,
         fade: true,
         autoplay: true,
@@ -170,6 +175,7 @@ $(document).ready(function () {
         autoplaySpeed: 4000,
         asNavFor: '.team__slider-top',
         dots: false,
+        arrows: false,
         centerMode: true,
         focusOnSelect: true,
         responsive: [
@@ -212,6 +218,7 @@ $(document).ready(function () {
     $('.media__slider-top').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
+        dots: false,
         arrows: false,
         fade: true,
         autoplay: true,
@@ -225,6 +232,7 @@ $(document).ready(function () {
         autoplaySpeed: 4000,
         asNavFor: '.media__slider-top',
         dots: false,
+        arrows: false,
         centerMode: true,
         focusOnSelect: true,
         responsive: [
@@ -247,4 +255,37 @@ $(document).ready(function () {
         ]
     });
     /*close*/
+
+    /*slider title animation*/
+    $('.main-slider__top').find('.main-slider__top--title').delay(1200).animate({
+            opacity: 1,
+            right: 88
+        }, 'slow'
+    );
+    /*close*/
+
+    $(window).scroll(function(){
+        var about_slider = $('.about__slider-top').offset().top - $(window).height(),
+            team_slider = $('.team__slider-top').offset().top - $(window).height(),
+            media_slider = $('.media__slider-top').offset().top - $(window).height();
+
+        if  ($(window).scrollTop() > about_slider) {
+            $('.about__slider-top').find('.about__slider-top--title').delay(1200).animate({
+                opacity: 1,
+                right: 88
+            }, 'slow');
+        }
+        if  ($(window).scrollTop() > team_slider) {
+            $('.team__slider-top').find('.team__slider-top--title').delay(1200).animate({
+                opacity: 1,
+                right: 88
+            }, 'slow');
+        }
+        if  ($(window).scrollTop() > media_slider) {
+            $('.media__slider-top').find('.media__slider-top--title').delay(1200).animate({
+                opacity: 1,
+                right: 88
+            }, 'slow');
+        }
+    });
 });
