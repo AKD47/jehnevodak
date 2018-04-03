@@ -348,14 +348,15 @@ $(document).ready(function () {
             url: myajax.url,
             type: "POST",
             data: {
-                action: 'contactform',
+                action: 'contact',
                 name: name,
                 mail: mail,
                 phone: phone,
                 message: message
             },
-            success: function (data) {
+            success: function(data){
                 $('#contact-form input, textarea').val('').removeClass('error, not_error').text('');
+                // alert(data);
             }
         }); // end ajax({...})
         return false;
