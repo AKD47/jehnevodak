@@ -9,7 +9,13 @@ $options = array(
 			'email' => array(
 				'type'  => 'text',
 				'label' => __( 'email', '{domain}' ),
+                'value' => 'Média o nás',
 			),
+            'phone_primary' => array(
+                'type' => 'text',
+                'label' => __( 'email', '{domain}' ),
+                'value' => 'Média o nás',
+            )
 		),
 	)
 );
