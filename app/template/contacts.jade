@@ -10,14 +10,14 @@ section#contacts.contacts
 
         .contacts__wrapper--element
             h3 TELEFON
-            p +420 222 232 061-2
-            p +420 222 232 661
-            p +420 222 232 276
+            a(href='tel:+420 222 232 061-2') +420 222 232 061-2
+            a(href='tel:+420 222 232 661') +420 222 232 661
+            a(href='tel:+420 222 232 276') +420 222 232 276
 
         .contacts__wrapper--element
             h3 E-MAIL
-            p jehne@jehnevodak.cz
-            p vodak@jehnevodak.cz
+            a(href='mailto:jehne@jehnevodak.cz') jehne@jehnevodak.cz
+            a(href='mailto:vodak@jehnevodak.cz') vodak@jehnevodak.cz
 
         .contacts__wrapper--element
             h3 BANKOVNÍ SPOJENÍ
@@ -33,16 +33,27 @@ section#contacts.contacts
             p IČ: 66219094
             p DIČ: CZ6709151977
 
-    form.contacts__form
+    form#contact-form.contacts__form
 
         h3 Napište nám
 
-        input.contacts__form--field(type='text', placeholder='Jméno a příjmení')
+        input.contacts__form--field(id='contact-name',
+        type='text', name='name',
+        placeholder='Jméno a příjmení',
+        minlength='2', maxlength='20' required)
 
-        input.contacts__form--field(type='text', placeholder='E-mail')
+        input.contacts__form--field(id='contact-email',
+        type='text', name='email',
+        placeholder='E-mail',
+        minlength='5', maxlength='20' required)
 
-        input.contacts__form--field(type='text', placeholder='Telefon')
+        input.contacts__form--field(id='contact-phone',
+        type='text', name='phone',
+        placeholder='Telefon',
+        minlength="5", maxlength='20' required)
 
-        textarea.contacts__form--text(placeholder='Text Vaší zprávy')
+        textarea.contacts__form--text(id="contact-text",
+        name='message', minlength='2', maxlength='250',
+        placeholder='Text Vaší zprávy' required)
 
-        input.contacts__form--submit(type='submit', value='ODESLAT')
+        input.contacts__form--submit(id='contact-submit', type='submit', value='ODESLAT')

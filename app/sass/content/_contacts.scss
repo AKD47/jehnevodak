@@ -36,7 +36,7 @@
         font-size: 21px;
       }
 
-      > p {
+      > p, a {
         position: relative;
         float: left;
         width: 100%;
@@ -47,6 +47,11 @@
         font-size: 21px;
         line-height: 27px;
       }
+
+      > a:hover {
+        color: white;
+        text-decoration: underline;
+      }
     }
     &--element:nth-child(odd) {
       background-color: #1d1d1b;
@@ -54,8 +59,13 @@
     &--element:nth-child(even) {
       background-color: #eae0cb;
 
-      > p {
+      > p, a {
         color: #1d1d1b;
+      }
+
+      > a:hover {
+        color: #1d1d1b;
+        text-decoration: underline;
       }
     }
   }
