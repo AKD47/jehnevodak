@@ -129,7 +129,7 @@ $options = [
     ),
     'about_slider_top' => array(
         'type' => 'addable-popup',
-        'label' => __('About slider images', '{domain}'),
+        'label' => __('About slider BIG images', '{domain}'),
         'desc' => __('adding images', '{domain}'),
         'template' => '{{- title }}',
         'popup-title' => null,
@@ -154,7 +154,7 @@ $options = [
     ),
     'about_slider_for' => array(
         'type' => 'addable-popup',
-        'label' => __('About slider images', '{domain}'),
+        'label' => __('About slider SMALL images', '{domain}'),
         'desc' => __('adding images', '{domain}'),
         'template' => '{{- title }}',
         'popup-title' => null,
@@ -586,7 +586,7 @@ $options = [
     ),
     'team_slider_top' => array(
         'type' => 'addable-popup',
-        'label' => __('Team slider images', '{domain}'),
+        'label' => __('Team slider BIG images', '{domain}'),
         'desc' => __('adding images', '{domain}'),
         'template' => '{{- title }}',
         'popup-title' => null,
@@ -611,7 +611,7 @@ $options = [
     ),
     'team_slider_for' => array(
         'type' => 'addable-popup',
-        'label' => __('Team slider images', '{domain}'),
+        'label' => __('Team slider SMALL images', '{domain}'),
         'desc' => __('adding images', '{domain}'),
         'template' => '{{- title }}',
         'popup-title' => null,
@@ -706,5 +706,55 @@ $options = [
                 'desc' => __('Add text', '{domain}'),
             ),
         ),
+    ),
+    'media_slider_top' => array(
+        'type' => 'addable-popup',
+        'label' => __('Media slider BIG images', '{domain}'),
+        'desc' => __('adding images', '{domain}'),
+        'template' => '{{- title }}',
+        'popup-title' => null,
+        'size' => 'small', // small, medium, large
+        'limit' => 1, // limit the number of popup`s that can be added
+        'add-button-text' => __('Add', '{domain}'),
+        'sortable' => true,
+        'popup-options' => array(
+            'photo' => array(
+                'type' => 'upload',
+                'label' => __('Photo', '{domain}'),
+                'desc' => __('Add photo', '{domain}'),
+                'images_only' => true,
+            ),
+            'title' => array(
+                'type' => 'text',
+                'label' => __('title of photo', '{domain}'),
+                'desc' => __('add title', '{domain}'),
+                'value' => '',
+            ),
+        ),
+    ),
+    'media_slider_for' => array(
+        'type' => 'addable-popup',
+        'label' => __('Media slider SMALL images', '{domain}'),
+        'desc' => __('adding images', '{domain}'),
+        'template' => '{{- title }}',
+        'popup-title' => null,
+        'size' => 'small', // small, medium, large
+        'limit' => 4, // limit the number of popup`s that can be added
+        'add-button-text' => __('Add', '{domain}'),
+        'sortable' => true,
+        'popup-options' => array(
+            'photo' => array(
+                'type' => 'upload',
+                'label' => __('Photo', '{domain}'),
+                'desc' => __('Add photo', '{domain}'),
+                'images_only' => true,
+            ),
+        ),
+    ),
+    'contacts_title' => array(
+        'type' => 'text',
+        'label' => __('title of "Kontaktujte nás" section', '{domain}'),
+        'desc' => __('add title', '{domain}'),
+        'value' => 'Kontaktujte nás',
     ),
 ];

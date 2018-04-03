@@ -299,32 +299,28 @@
 
     <div class="media__slider-top">
 
-        <div class="media__slider-top--slide">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_4.png" alt="slide">
-            <h3 class="media__slider-top--title">Těší nás zájem médií o naši práci.<br>Pravidelně konzultujeme
-                významné<br>právní kauzy ve sdělovacích prostředcích.</h3>
-        </div>
+        <?php foreach ( $atts['media_slider_top'] as $att){?>
+            <div class="media__slider-top--slide">
+                <img src="<?= $att['photo']['url']?>" alt="slide">
+                <h3 class="media__slider-top--title"><?= $att['title']?></h3>
+            </div>
+        <? };?>
 
     </div>
 
     <div class="media__slider-for">
-        <div class="media__slider-for--slide">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_4.png" alt="slide">
-        </div>
-        <div class="media__slider-for--slide">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_1.png" alt="slide">
-        </div>
-        <div class="media__slider-for--slide">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_2.png" alt="slide">
-        </div>
-        <div class="media__slider-for--slide">
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_3.png" alt="slide">
-        </div>
+
+        <?php foreach ( $atts['media_slider_for'] as $att) {?>
+            <div class="media__slider-for--slide">
+                <img src="<?= $att['photo']['url']?>" alt="slide">
+            </div>
+        <? };?>
+
     </div>
 </section>
 
 <section id="contacts" class="contacts">
-    <h3 class="section-title">Kontaktujte nás</h3>
+    <h3 class="section-title"><?= $atts['contacts_title']?></h3>
     <div class="contacts__wrapper">
         <div class="contacts__wrapper--element">
             <h3>ADRESA</h3>
@@ -333,14 +329,14 @@
         </div>
         <div class="contacts__wrapper--element">
             <h3>TELEFON</h3>
-            <p>+420 222 232 061-2</p>
-            <p>+420 222 232 661</p>
-            <p>+420 222 232 276</p>
+            <a href="tel:+420 222 232 061-2">+420 222 232 061-2</a>
+            <a href="tel:+420 222 232 661">+420 222 232 661</a>
+            <a href="tel:+420 222 232 276">+420 222 232 276</a>
         </div>
         <div class="contacts__wrapper--element">
             <h3>E-MAIL</h3>
-            <p>jehne@jehnevodak.cz</p>
-            <p>vodak@jehnevodak.cz</p>
+            <a href="mailto:jehne@jehnevodak.cz">jehne@jehnevodak.cz</a>
+            <a href="mailto:vodak@jehnevodak.cz">vodak@jehnevodak.cz</a>
         </div>
         <div class="contacts__wrapper--element">
             <h3>BANKOVNÍ SPOJENÍ</h3>
