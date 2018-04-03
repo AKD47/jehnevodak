@@ -257,35 +257,119 @@ $(document).ready(function () {
     /*close*/
 
     /*slider title animation*/
-    $('.main-slider__top').find('.main-slider__top--title').delay(1200).animate({
-            opacity: 1,
-            right: 88
-        }, 'slow'
-    );
-    /*close*/
+    if ($(this).width() > 1024) {
+        $('.main-slider__top').find('.main-slider__top--title').delay(1200).animate({
+                opacity: 1,
+                right: 88
+            }, 'slow'
+        );
+    }
 
     $(window).scroll(function(){
         var about_slider = $('.about__slider-top').offset().top - $(window).height(),
             team_slider = $('.team__slider-top').offset().top - $(window).height(),
             media_slider = $('.media__slider-top').offset().top - $(window).height();
 
-        if  ($(window).scrollTop() > about_slider) {
-            $('.about__slider-top').find('.about__slider-top--title').delay(1200).animate({
-                opacity: 1,
-                right: 88
-            }, 'slow');
-        }
-        if  ($(window).scrollTop() > team_slider) {
-            $('.team__slider-top').find('.team__slider-top--title').delay(1200).animate({
-                opacity: 1,
-                right: 88
-            }, 'slow');
-        }
-        if  ($(window).scrollTop() > media_slider) {
-            $('.media__slider-top').find('.media__slider-top--title').delay(1200).animate({
-                opacity: 1,
-                right: 88
-            }, 'slow');
+        if ($(this).width() > 1024) {
+            if  ($(window).scrollTop() >= about_slider) {
+                $('.about__slider-top').find('.about__slider-top--title').delay(1200).animate({
+                    opacity: 1,
+                    right: 88
+                }, 'slow');
+            }
+            if  ($(window).scrollTop() >= team_slider) {
+                $('.team__slider-top').find('.team__slider-top--title').delay(1200).animate({
+                    opacity: 1,
+                    right: 88
+                }, 'slow');
+            }
+            if  ($(window).scrollTop() >= media_slider) {
+                $('.media__slider-top').find('.media__slider-top--title').delay(1200).animate({
+                    opacity: 1,
+                    right: 88
+                }, 'slow');
+            }
         }
     });
+    /*close*/
+
+    /*contacts form*/
+    $('#contact-name, #contact-email, #contact-phone, #contact-text').unbind().blur(function () {
+
+        var id = $(this).attr('id');
+        var val = $(this).val();
+
+        switch (id) {
+            case 'contact-name':
+                var rv_name = /^[a-zA-Zа-яА-Я]+$/;
+                if (val.length > 2 && val != '' && rv_name.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'contact-email':
+                var rv_email = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/;
+                if (val != '' && rv_email.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'contact-phone':
+                var rv_phone = /^([0-9_-])+/;
+                if (val != '' && rv_phone.test(val)) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+            case 'contact-text':
+                if (val != '' && val.length < 5000) {
+                    $(this).removeClass('error').addClass('not_error');
+                } else {
+                    $(this).removeClass('not_error').addClass('error');
+                }
+                break;
+
+        } // end switch(...)
+
+    }); // end blur()
+    $('#contact-form').submit(function (event) {
+        event.preventDefault();
+        var name = $('#contact-name').val(),
+            mail = $('#contact-email').val(),
+            phone = $('#contact-phone').val(),
+            message = $('#contact-text').val();
+        $.ajax({
+            url: myajax.url,
+            type: "POST",
+            data: {
+                action: 'contact',
+                name: name,
+                mail: mail,
+                phone: phone,
+                message: message
+                // success: function (data) {
+                //     if (data.result === 'success') {
+                //         $('#contact-form input, textarea').val('').removeClass('error, not_error').text('');
+                //     } else {
+                //         alert('Некорректно заполнено!!')
+                //     }
+                // }
+            },
+            // beforeSend: function(){
+            //     $('#contact-form input, textarea').val('').removeClass('error, not_error').text('');
+            // },
+            success: function(data){
+                $('#contact-form input, textarea').val('').removeClass('error, not_error').text('');
+                // alert(data);
+            }
+        }); // end ajax({...})
+        return false;
+    }); // end submit()
+    /*close*/
 });

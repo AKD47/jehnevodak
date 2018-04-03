@@ -114,6 +114,14 @@ textarea {
   font-family: "Helvetica Neue LT Pro Bold";
   font-size: 18px; }
 
+.error {
+  -webkit-box-shadow: 0 0 8px rgba(255, 0, 0, 0.9);
+          box-shadow: 0 0 8px rgba(255, 0, 0, 0.9); }
+
+.not_error {
+  -webkit-box-shadow: 0 0 6px rgba(185, 151, 82, 0.9);
+          box-shadow: 0 0 6px rgba(185, 151, 82, 0.9); }
+
 .header__navigation {
   position: relative;
   float: right; }
@@ -1167,7 +1175,7 @@ textarea {
         color: #b99752;
         font-family: "Helvetica Neue LT Pro Bold";
         font-size: 21px; }
-      .contacts__wrapper--element > p {
+      .contacts__wrapper--element > p, .contacts__wrapper--element a {
         position: relative;
         float: left;
         width: 100%;
@@ -1177,12 +1185,18 @@ textarea {
         font-family: "Helvetica Neue LT Pro Lt";
         font-size: 21px;
         line-height: 27px; }
+      .contacts__wrapper--element > a:hover {
+        color: white;
+        text-decoration: underline; }
     .contacts__wrapper--element:nth-child(odd) {
       background-color: #1d1d1b; }
     .contacts__wrapper--element:nth-child(even) {
       background-color: #eae0cb; }
-      .contacts__wrapper--element:nth-child(even) > p {
+      .contacts__wrapper--element:nth-child(even) > p, .contacts__wrapper--element:nth-child(even) a {
         color: #1d1d1b; }
+      .contacts__wrapper--element:nth-child(even) > a:hover {
+        color: #1d1d1b;
+        text-decoration: underline; }
   .contacts__form {
     position: relative;
     float: left;

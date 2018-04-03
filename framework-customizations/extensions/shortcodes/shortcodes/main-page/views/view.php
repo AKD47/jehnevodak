@@ -357,12 +357,12 @@
             <p>DIČ: CZ6709151977</p>
         </div>
     </div>
-    <form class="contacts__form">
+    <form id="contact-form" class="contacts__form">
         <h3>Napište nám</h3>
-        <input type="text" placeholder="Jméno a příjmení" class="contacts__form--field">
-        <input type="text" placeholder="E-mail" class="contacts__form--field">
-        <input type="text" placeholder="Telefon" class="contacts__form--field">
-        <textarea placeholder="Text Vaší zprávy" class="contacts__form--text"></textarea>
-        <input type="submit" value="ODESLAT" class="contacts__form--submit">
+        <input id="contact-name" type="text" name="name" placeholder="Jméno a příjmení" minlength="2" maxlength="20" required class="contacts__form--field">
+        <input id="contact-email" type="text" name="email" placeholder="E-mail" minlength="5" maxlength="20" required class="contacts__form--field">
+        <input id="contact-phone" type="text" name="phone" placeholder="Telefon" minlength="5" maxlength="20" required class="contacts__form--field">
+        <textarea id="contact-text" name="message" minlength="2" maxlength="250" placeholder="Text Vaší zprávy" required class="contacts__form--text"></textarea>
+        <input id="contact-submit" type="submit" value="ODESLAT" class="contacts__form--submit">
     </form>
 </section>
