@@ -71,8 +71,8 @@
         position: relative;
         float: left;
         width: 100%;
-        margin-top: 0;
-        margin-bottom: 40px;
+        margin-top: 10px;
+        margin-bottom: 30px;
         text-align: left;
         color: #b99752;
         font-family: $HelveticaNeueLTProBold;
@@ -114,6 +114,10 @@
     > .descr {
       @include order(1);
       background-color: #e5e5e5;
+
+      @include breakpoint(max-width 700px){
+        @include order(2);
+      }
 
       > .triangle {
         position: absolute;
@@ -158,6 +162,10 @@
 
     > .photo {
       @include order(2);
+
+      @include breakpoint(max-width 700px){
+        @include order(1);
+      }
     }
   }
 }

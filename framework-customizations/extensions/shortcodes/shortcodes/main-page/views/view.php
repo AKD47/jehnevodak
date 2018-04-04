@@ -9,7 +9,9 @@
         <?php foreach ( $atts['top_slider_top'] as $att ) {?>
             <div class="main-slider__top--slide">
                 <img src="<?= $att['photo']['url'] ?>" alt="slide">
-                <h3 class="main-slider__top--title"><?= $att['title'] ?></h3>
+                <h3 class="main-slider__top--title">
+                    <img src="<?php bloginfo('template_directory'); ?>/assets/img/top-slide-title.png">
+<!--                    --><?//= $att['title'] ?><!--</h3>-->
             </div>
         <?php }?>
     </div>
@@ -324,14 +326,13 @@
     <div class="contacts__wrapper">
         <div class="contacts__wrapper--element">
             <h3>ADRESA</h3>
-            <p>Washingtonova 1567/25</p>
-            <p>Praha 1, 110 00</p>
+            <p><?= fw_get_db_customizer_option('address');?></p>
         </div>
         <div class="contacts__wrapper--element">
             <h3>TELEFON</h3>
-            <a href="tel:+420 222 232 061-2">+420 222 232 061-2</a>
-            <a href="tel:+420 222 232 661">+420 222 232 661</a>
-            <a href="tel:+420 222 232 276">+420 222 232 276</a>
+            <a href="tel:<?= fw_get_db_customizer_option('phone_first');?>"><?= fw_get_db_customizer_option('phone_first');?></a>
+            <a href="tel:<?= fw_get_db_customizer_option('phone_second');?>"><?= fw_get_db_customizer_option('phone_second');?></a>
+            <a href="tel:<?= fw_get_db_customizer_option('phone_third');?>"><?= fw_get_db_customizer_option('phone_third');?></a>
         </div>
         <div class="contacts__wrapper--element">
             <h3>E-MAIL</h3>
@@ -340,12 +341,11 @@
         </div>
         <div class="contacts__wrapper--element">
             <h3>BANKOVNÍ SPOJENÍ</h3>
-            <p>GE Money Bank, a.s.</p>
-            <p>4124438504/0600</p>
+            <p><?= fw_get_db_customizer_option('bank_requisites');?></p>
         </div>
         <div class="contacts__wrapper--element">
             <h3>FAX</h3>
-            <p>+420 222 230 052</p>
+            <p><?= fw_get_db_customizer_option('fax');?></p>
         </div>
         <div class="contacts__wrapper--element">
             <h3>POVINNÉ ÚDAJE</h3>

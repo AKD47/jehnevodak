@@ -19,7 +19,7 @@ $(document).ready(function () {
             preloader.close();
         }, 400);
         if ($(this).width() > 1024) {
-            $('.main-slider__top').find('.main-slider__top--title').delay(1600).animate({
+            $('.main-slider__top').find('.main-slider__top--title').delay(1200).animate({
                     opacity: 1,
                     right: 88
                 }, 'slow'
@@ -217,7 +217,9 @@ $(document).ready(function () {
         fade: false,
         infinite: true,
         touchMove: false,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 4000
     });
     /*close*/
 
@@ -264,14 +266,6 @@ $(document).ready(function () {
     /*close*/
 
     /*slider title animation*/
-    // if ($(this).width() > 1024) {
-    //     $('.main-slider__top').find('.main-slider__top--title').delay(1600).animate({
-    //             opacity: 1,
-    //             right: 88
-    //         }, 'slow'
-    //     );
-    // }
-
     $(window).scroll(function(){
         var about_slider = $('.about__slider-top').offset().top - $(window).height(),
             team_slider = $('.team__slider-top').offset().top - $(window).height(),
@@ -360,17 +354,7 @@ $(document).ready(function () {
                 mail: mail,
                 phone: phone,
                 message: message
-                // success: function (data) {
-                //     if (data.result === 'success') {
-                //         $('#contact-form input, textarea').val('').removeClass('error, not_error').text('');
-                //     } else {
-                //         alert('Некорректно заполнено!!')
-                //     }
-                // }
             },
-            // beforeSend: function(){
-            //     $('#contact-form input, textarea').val('').removeClass('error, not_error').text('');
-            // },
             success: function(data){
                 $('#contact-form input, textarea').val('').removeClass('error, not_error').text('');
                 // alert(data);
