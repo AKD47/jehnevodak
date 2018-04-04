@@ -356,7 +356,7 @@ $(document).ready(function () {
                 message: message
             },
             success: function(data){
-                $('#contact-form input, textarea').val('').removeClass('error, not_error').text('');
+                $('#contact-form input:text, textarea').val('').removeClass('error, not_error').text('');
                 // alert(data);
             }
         }); // end ajax({...})
