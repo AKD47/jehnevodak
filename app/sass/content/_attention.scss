@@ -115,6 +115,10 @@
       @include order(1);
       background-color: #e5e5e5;
 
+      @include breakpoint(max-width 700px){
+        @include order(2);
+      }
+
       > .triangle {
         position: absolute;
         size: 24px;
@@ -158,6 +162,10 @@
 
     > .photo {
       @include order(2);
+
+      @include breakpoint(max-width 700px){
+        @include order(1);
+      }
     }
   }
 }

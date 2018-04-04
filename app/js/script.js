@@ -217,7 +217,9 @@ $(document).ready(function () {
         fade: false,
         infinite: true,
         touchMove: false,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        autoplay: true,
+        autoplaySpeed: 4000
     });
     /*close*/
 
