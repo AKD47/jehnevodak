@@ -9,7 +9,7 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('main'); ?>>
 
     <!-- .entry-content -->
     <section class="main-slider">
@@ -20,35 +20,10 @@
                     <img src="<?php bloginfo('template_directory'); ?>/assets/img/top-slide-title.png">
                 </h3>
             </div>
-            <!--.main-slider__top--slide-->
-            <!--    img(src='img/slide_2.png' alt='slide')-->
-            <!--    h3.main-slider__top--title-->
-            <!--        | Jehne, Vodák a partneři-->
-            <!--        br-->
-            <!--        | advokátní kancelář-->
-            <!--.main-slider__top--slide-->
-            <!--    img(src='img/slide_3.png' alt='slide')-->
-            <!--    h3.main-slider__top--title-->
-            <!--        | Jehne, Vodák a partneři-->
-            <!--        br-->
-            <!--        | advokátní kancelář-->
-            <!--.main-slider__top--slide-->
-            <!--    img(src='img/slide_4.png' alt='slide')-->
-            <!--    h3.main-slider__top--title-->
-            <!--        | Jehne, Vodák a partneři-->
-            <!--        br-->
-            <!--        | advokátní kancelář-->
         </div>
         <div class="main-slider__for">
-            <div class="main-slider__for--slide"
-            <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_1_big.png" alt="slide">
-        </div>
-        <!--.main-slider__for--slide-->
-        <!--    img(src='img/slide_2.png' alt='slide')-->
-        <!--.main-slider__for--slide-->
-        <!--    img(src='img/slide_3.png' alt='slide')-->
-        <!--.main-slider__for--slide-->
-        <!--    img(src='img/slide_4.png' alt='slide')-->
+            <div class="main-slider__for--slide">
+            <img src="<?php bloginfo('template_directory'); ?>/assets/img/slide_1_big.png" alt="slide"></div>
         </div>
     </section>
     <section id="about" class="about">
@@ -92,34 +67,11 @@
                     <h3 class="about__slider-top--title">Být klientem naší advokátní kanceláře,<br>znamená respekt
                         vašich obchodních partnerů.</h3>
                 </div>
-                <!--.about__slider-top--slide-->
-                <!--    img(src='img/slide_3.png' alt='slide')-->
-                <!--    h3.about__slider-top--title-->
-                <!--        | Být klientem naší advokátní kanceláře,-->
-                <!--        br-->
-                <!--        | znamená respekt vašich obchodních partnerů.-->
-                <!--.about__slider-top--slide-->
-                <!--    img(src='img/slide_4.png' alt='slide')-->
-                <!--    h3.about__slider-top--title-->
-                <!--        | Být klientem naší advokátní kanceláře,-->
-                <!--        br-->
-                <!--        | znamená respekt vašich obchodních partnerů.-->
-                <!--.about__slider-top--slide-->
-                <!--    img(src='img/slide_1.png' alt='slide')-->
-                <!--    h3.about__slider-top--title-->
-                <!--        | Být klientem naší advokátní kanceláře,-->
-                <!--        br-->
-                <!--        | znamená respekt vašich obchodních partnerů.-->
             </div>
             <div class="about__slider-for">
                 <div class="about__slider-for--slide"><img
                             src="<?php bloginfo('template_directory'); ?>/assets/img/slide_2_big.png" alt="slide"></div>
-                <!--.about__slider-for--slide-->
-                <!--    img(src='img/slide_3.png' alt='slide')-->
-                <!--.about__slider-for--slide-->
-                <!--    img(src='img/slide_4.png' alt='slide')-->
-                <!--.about__slider-for--slide-->
-                <!--    img(src='img/slide_1.png' alt='slide')-->
+
             </div>
         </div>
     </section>
@@ -247,34 +199,12 @@
                     <h3 class="team__slider-top--title">Spolehlivost, efektivita a profesionalita...<br>...to jsou
                         vlastnosti, které vždy ctíme.</h3>
                 </div>
-                <!--.team__slider-top--slide-->
-                <!--    img(src='img/slide_4.png' alt='slide')-->
-                <!--    h3.team__slider-top--title-->
-                <!--        | Spolehlivost, efektivita a profesionalita...-->
-                <!--        br-->
-                <!--        | ...to jsou vlastnosti, které vždy ctíme.-->
-                <!--.team__slider-top--slide-->
-                <!--    img(src='img/slide_1.png' alt='slide')-->
-                <!--    h3.team__slider-top--title-->
-                <!--        | Spolehlivost, efektivita a profesionalita...-->
-                <!--        br-->
-                <!--        | ...to jsou vlastnosti, které vždy ctíme.-->
-                <!--.team__slider-top--slide-->
-                <!--    img(src='img/slide_2.png' alt='slide')-->
-                <!--    h3.team__slider-top--title-->
-                <!--        | Spolehlivost, efektivita a profesionalita...-->
-                <!--        br-->
-                <!--        | ...to jsou vlastnosti, které vždy ctíme.-->
+
             </div>
             <div class="team__slider-for">
                 <div class="team__slider-for--slide"><img
                             src="<?php bloginfo('template_directory'); ?>/assets/img/slide_3_big.png" alt="slide"></div>
-                <!--.team__slider-for--slide-->
-                <!--    img(src='img/slide_4.png' alt='slide')-->
-                <!--.team__slider-for--slide-->
-                <!--    img(src='img/slide_1.png' alt='slide')-->
-                <!--.team__slider-for--slide-->
-                <!--    img(src='img/slide_2.png' alt='slide')-->
+
             </div>
         </div>
     </section>
@@ -490,12 +420,7 @@
         <div class="media__slider-for">
             <div class="media__slider-for--slide"><img
                         src="<?php bloginfo('template_directory'); ?>/assets/img/slide_4_big.png" alt="slide"></div>
-            <!--.media__slider-for--slide-->
-            <!--    img(src='img/slide_1.png' alt='slide')-->
-            <!--.media__slider-for--slide-->
-            <!--    img(src='img/slide_2.png' alt='slide')-->
-            <!--.media__slider-for--slide-->
-            <!--    img(src='img/slide_3.png' alt='slide')-->
+
         </div>
     </section>
     <section id="contacts" class="contacts">
